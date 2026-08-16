@@ -1,0 +1,7 @@
+name,student_id,grade,major,enrolled,created_at
+Yugesh Kumar,STU001,3.8,Computer Science,True,2024-09-01T08:00:00
+Kishor Patel,STU002,3.2,Electrical Engineering,True,2024-09-01T08:05:00
+Gajen Silva,STU003,2.5,Mathematics,True,2024-09-01T08:10:00
+Gopi Nair,STU004,1.8,Physics,True,2024-09-01T08:15:00
+Amara Hassan,STU005,3.95,Computer Science,True,2024-09-02T09:00:00
+Namisa,STU0002,3.8,Swe,True,2026-06-11T18:39:52.606491

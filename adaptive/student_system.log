@@ -195,3 +195,10 @@
 2026-07-10 00:39:22 | INFO     | services.report_service:major_breakdown:66 | Computing major breakdown.
 2026-07-10 00:39:22 | DEBUG    | services.report_service:major_breakdown:71 | Major breakdown: {'Computer Science': 2, 'Electrical Engineering': 1, 'Mathematics': 1, 'Physics': 1, 'Swe': 1}
 2026-07-10 00:39:22 | SUCCESS  | services.report_service:print_full_report:122 | Full report printed.
+2026-08-16 23:25:08 | DEBUG    | utils.logger_setup:setup_logging:59 | Loguru logging initialised.
+2026-08-16 23:25:08 | INFO     | __main__:main:170 | Program started.
+2026-08-16 23:25:09 | DEBUG    | __main__:main:200 | Menu choice: 8
+2026-08-16 23:25:09 | INFO     | __main__:action_export_csv:162 | User selected: Export to CSV.
+2026-08-16 23:25:09 | DEBUG    | services.student_service:_load_data:36 | Loaded 6 student(s) from C:\Users\Dell\Desktop\maintenance\adaptive\data\students.json.
+2026-08-16 23:25:09 | SUCCESS  | services.student_service:export_to_csv:66 | Exported 6 student(s) to students_export.csv.
+2026-08-16 23:25:12 | INFO     | __main__:main:193 | User exited the program.

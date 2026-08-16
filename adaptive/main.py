@@ -38,7 +38,7 @@ logger = get_logger(__name__)
 # ── Now import the rest ──────────────────────────────────────────────────────
 from services.student_service import (
     list_students, add_student, search_student,
-    remove_student, update_student, sort_by_name, sort_by_grade,
+    remove_student, update_student, sort_by_name, sort_by_grade, export_to_csv,
 )
 from services.report_service import print_full_report
 from utils.validators import validate_menu_choice
@@ -58,6 +58,7 @@ def _print_menu() -> None:
   ║  5. Update a student                                 ║
   ║  6. Full report (stats + classification)             ║
   ║  7. Sort students                                    ║
+  ║  8. Export to CSV                                    ║
   ║  0. Exit                                             ║
   ╚══════════════════════════════════════════════════════╝""")
 
@@ -156,6 +157,12 @@ def action_sort():
         result = sort_by_grade(students, reverse=False)
     _print_students(result)
 
+@logger.catch(level="ERROR", message="Error in export_csv")
+def action_export_csv():
+    logger.info("User selected: Export to CSV.")
+    export_to_csv()
+    print("\n  ✓ Students exported to students_export.csv\n")
+
 
 # ── Main loop ─────────────────────────────────────────────────────────────────
 
@@ -169,13 +176,14 @@ def main():
         5: action_update,
         6: print_full_report,
         7: action_sort,
+        8: action_export_csv,
     }
 
     while True:
         _print_menu()
         raw = input("  Select option: ").strip()
         try:
-            choice = validate_menu_choice(raw, 0, 7)
+            choice = validate_menu_choice(raw, 0, 8)
         except ValueError as e:
             print(f"\n  ✗ {e}\n")
             logger.warning(f"Invalid menu input: '{raw}'")

@@ -6,6 +6,7 @@ PySnooper is applied to every mutating function so variable
 changes are traced to pysnooper_trace.log.
 """
 
+import csv
 import json
 import os
 import pysnooper
@@ -46,6 +47,23 @@ def _save_data(students: List[Student]) -> None:
     with open(path, "w", encoding="utf-8") as f:
         json.dump([s.to_dict() for s in students], f, indent=2)
     logger.debug(f"Saved {len(students)} student(s) to {path}.")
+
+def export_to_csv(path: str = "students_export.csv") -> None:
+    """
+    Export all students to a CSV file for external systems
+    that require CSV rather than JSON.
+    """
+    students = _load_data()
+    with open(path, "w", newline="", encoding="utf-8") as f:
+        writer = csv.DictWriter(
+            f,
+            fieldnames=["name", "student_id", "grade",
+                        "major", "enrolled", "created_at"]
+        )
+        writer.writeheader()
+        for s in students:
+            writer.writerow(s.to_dict())
+    logger.success(f"Exported {len(students)} student(s) to {path}.")
 
 
 # ── CRUD operations ───────────────────────────────────────────────────────────
