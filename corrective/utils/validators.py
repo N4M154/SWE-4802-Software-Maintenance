@@ -47,6 +47,9 @@ def validate_grade(grade_str: str) -> float:
     Validate a GPA value.
     Must be a number in the range 0.0 – 4.0.
     """
+    if grade_str is None:
+        logger.warning("Grade value was None.")
+        raise ValueError("Grade must be a numeric value.")
     try:
         grade = float(grade_str.strip())
     except ValueError:
