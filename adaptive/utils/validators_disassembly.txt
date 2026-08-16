@@ -1,0 +1,379 @@
+  0           0 RESUME                   0
+
+  1           2 LOAD_CONST               0 ('\nutils/validators.py\n===================\nInput validation helpers.\nAll functions raise ValueError on bad input so callers can handle cleanly.\n')
+              4 STORE_NAME               0 (__doc__)
+
+  8           6 LOAD_CONST               1 (0)
+              8 LOAD_CONST               2 (None)
+             10 IMPORT_NAME              1 (re)
+             12 STORE_NAME               1 (re)
+
+  9          14 LOAD_CONST               1 (0)
+             16 LOAD_CONST               3 (('get_logger',))
+             18 IMPORT_NAME              2 (utils.logger_setup)
+             20 IMPORT_FROM              3 (get_logger)
+             22 STORE_NAME               3 (get_logger)
+             24 POP_TOP
+
+ 11          26 PUSH_NULL
+             28 LOAD_NAME                3 (get_logger)
+             30 LOAD_NAME                4 (__name__)
+             32 PRECALL                  1
+             36 CALL                     1
+             46 STORE_NAME               5 (logger)
+
+ 14          48 LOAD_CONST               4 ('name')
+             50 LOAD_NAME                6 (str)
+             52 LOAD_CONST               5 ('return')
+             54 LOAD_NAME                6 (str)
+             56 BUILD_TUPLE              4
+             58 LOAD_CONST               6 (<code object validate_name at 0x000001FD36CDC640, file "C:\Users\Dell\Desktop\maintenance\utils\validators.py", line 14>)
+             60 MAKE_FUNCTION            4 (annotations)
+             62 STORE_NAME               7 (validate_name)
+
+ 31          64 LOAD_CONST               7 ('student_id')
+             66 LOAD_NAME                6 (str)
+             68 LOAD_CONST               5 ('return')
+             70 LOAD_NAME                6 (str)
+             72 BUILD_TUPLE              4
+             74 LOAD_CONST               8 (<code object validate_student_id at 0x000001FD3722D2F0, file "C:\Users\Dell\Desktop\maintenance\utils\validators.py", line 31>)
+             76 MAKE_FUNCTION            4 (annotations)
+             78 STORE_NAME               8 (validate_student_id)
+
+ 45          80 LOAD_CONST               9 ('grade_str')
+             82 LOAD_NAME                6 (str)
+             84 LOAD_CONST               5 ('return')
+             86 LOAD_NAME                9 (float)
+             88 BUILD_TUPLE              4
+             90 LOAD_CONST              10 (<code object validate_grade at 0x000001FD370FBF10, file "C:\Users\Dell\Desktop\maintenance\utils\validators.py", line 45>)
+             92 MAKE_FUNCTION            4 (annotations)
+             94 STORE_NAME              10 (validate_grade)
+
+ 61          96 LOAD_CONST              11 ('major')
+             98 LOAD_NAME                6 (str)
+            100 LOAD_CONST               5 ('return')
+            102 LOAD_NAME                6 (str)
+            104 BUILD_TUPLE              4
+            106 LOAD_CONST              12 (<code object validate_major at 0x000001FD36E01620, file "C:\Users\Dell\Desktop\maintenance\utils\validators.py", line 61>)
+            108 MAKE_FUNCTION            4 (annotations)
+            110 STORE_NAME              11 (validate_major)
+
+ 73         112 LOAD_CONST              13 ('raw')
+            114 LOAD_NAME                6 (str)
+            116 LOAD_CONST              14 ('low')
+            118 LOAD_NAME               12 (int)
+            120 LOAD_CONST              15 ('high')
+            122 LOAD_NAME               12 (int)
+            124 LOAD_CONST               5 ('return')
+            126 LOAD_NAME               12 (int)
+            128 BUILD_TUPLE              8
+            130 LOAD_CONST              16 (<code object validate_menu_choice at 0x000001FD3722D480, file "C:\Users\Dell\Desktop\maintenance\utils\validators.py", line 73>)
+            132 MAKE_FUNCTION            4 (annotations)
+            134 STORE_NAME              13 (validate_menu_choice)
+            136 LOAD_CONST               2 (None)
+            138 RETURN_VALUE
+
+Disassembly of <code object validate_name at 0x000001FD36CDC640, file "C:\Users\Dell\Desktop\maintenance\utils\validators.py", line 14>:
+ 14           0 RESUME                   0
+
+ 21           2 LOAD_FAST                0 (name)
+              4 LOAD_METHOD              0 (strip)
+             26 PRECALL                  0
+             30 CALL                     0
+             40 STORE_FAST               0 (name)
+
+ 22          42 LOAD_GLOBAL              3 (NULL + len)
+             54 LOAD_FAST                0 (name)
+             56 PRECALL                  1
+             60 CALL                     1
+             70 LOAD_CONST               1 (2)
+             72 COMPARE_OP               0 (<)
+             78 POP_JUMP_FORWARD_IF_TRUE    19 (to 118)
+             80 LOAD_GLOBAL              3 (NULL + len)
+             92 LOAD_FAST                0 (name)
+             94 PRECALL                  1
+             98 CALL                     1
+            108 LOAD_CONST               2 (60)
+            110 COMPARE_OP               4 (>)
+            116 POP_JUMP_FORWARD_IF_FALSE    45 (to 208)
+
+ 23     >>  118 LOAD_GLOBAL              4 (logger)
+            130 LOAD_METHOD              3 (warning)
+            152 LOAD_CONST               3 ("Name length out of range: '")
+            154 LOAD_FAST                0 (name)
+            156 FORMAT_VALUE             0
+            158 LOAD_CONST               4 ("'")
+            160 BUILD_STRING             3
+            162 PRECALL                  1
+            166 CALL                     1
+            176 POP_TOP
+
+ 24         178 LOAD_GLOBAL              9 (NULL + ValueError)
+            190 LOAD_CONST               5 ('Name must be between 2 and 60 characters.')
+            192 PRECALL                  1
+            196 CALL                     1
+            206 RAISE_VARARGS            1
+
+ 25     >>  208 LOAD_GLOBAL             11 (NULL + re)
+            220 LOAD_ATTR                6 (fullmatch)
+            230 LOAD_CONST               6 ("[A-Za-z\\s\\-']+")
+            232 LOAD_FAST                0 (name)
+            234 PRECALL                  2
+            238 CALL                     2
+            248 POP_JUMP_FORWARD_IF_TRUE    45 (to 340)
+
+ 26         250 LOAD_GLOBAL              4 (logger)
+            262 LOAD_METHOD              3 (warning)
+            284 LOAD_CONST               7 ("Name contains invalid characters: '")
+            286 LOAD_FAST                0 (name)
+            288 FORMAT_VALUE             0
+            290 LOAD_CONST               4 ("'")
+            292 BUILD_STRING             3
+            294 PRECALL                  1
+            298 CALL                     1
+            308 POP_TOP
+
+ 27         310 LOAD_GLOBAL              9 (NULL + ValueError)
+            322 LOAD_CONST               8 ('Name may only contain letters, spaces, hyphens, or apostrophes.')
+            324 PRECALL                  1
+            328 CALL                     1
+            338 RAISE_VARARGS            1
+
+ 28     >>  340 LOAD_FAST                0 (name)
+            342 LOAD_METHOD              7 (title)
+            364 PRECALL                  0
+            368 CALL                     0
+            378 RETURN_VALUE
+
+Disassembly of <code object validate_student_id at 0x000001FD3722D2F0, file "C:\Users\Dell\Desktop\maintenance\utils\validators.py", line 31>:
+ 31           0 RESUME                   0
+
+ 36           2 LOAD_FAST                0 (student_id)
+              4 LOAD_METHOD              0 (strip)
+             26 PRECALL                  0
+             30 CALL                     0
+             40 LOAD_METHOD              1 (upper)
+             62 PRECALL                  0
+             66 CALL                     0
+             76 STORE_FAST               0 (student_id)
+
+ 37          78 LOAD_GLOBAL              5 (NULL + re)
+             90 LOAD_ATTR                3 (fullmatch)
+            100 LOAD_CONST               1 ('[A-Z]{1,4}\\d{2,8}')
+            102 LOAD_FAST                0 (student_id)
+            104 PRECALL                  2
+            108 CALL                     2
+            118 POP_JUMP_FORWARD_IF_TRUE    45 (to 210)
+
+ 38         120 LOAD_GLOBAL              8 (logger)
+            132 LOAD_METHOD              5 (warning)
+            154 LOAD_CONST               2 ("Invalid student ID format: '")
+            156 LOAD_FAST                0 (student_id)
+            158 FORMAT_VALUE             0
+            160 LOAD_CONST               3 ("'")
+            162 BUILD_STRING             3
+            164 PRECALL                  1
+            168 CALL                     1
+            178 POP_TOP
+
+ 39         180 LOAD_GLOBAL             13 (NULL + ValueError)
+
+ 40         192 LOAD_CONST               4 ('Student ID must start with 1-4 letters followed by 2-8 digits (e.g. STU001).')
+
+ 39         194 PRECALL                  1
+            198 CALL                     1
+            208 RAISE_VARARGS            1
+
+ 42     >>  210 LOAD_FAST                0 (student_id)
+            212 RETURN_VALUE
+
+Disassembly of <code object validate_grade at 0x000001FD370FBF10, file "C:\Users\Dell\Desktop\maintenance\utils\validators.py", line 45>:
+ 45           0 RESUME                   0
+
+ 50           2 NOP
+
+ 51           4 LOAD_GLOBAL              1 (NULL + float)
+             16 LOAD_FAST                0 (grade_str)
+             18 LOAD_METHOD              1 (strip)
+             40 PRECALL                  0
+             44 CALL                     0
+             54 PRECALL                  1
+             58 CALL                     1
+             68 STORE_FAST               1 (grade)
+             70 JUMP_FORWARD            59 (to 190)
+        >>   72 PUSH_EXC_INFO
+
+ 52          74 LOAD_GLOBAL              4 (ValueError)
+             86 CHECK_EXC_MATCH
+             88 POP_JUMP_FORWARD_IF_FALSE    46 (to 182)
+             90 POP_TOP
+
+ 53          92 LOAD_GLOBAL              6 (logger)
+            104 LOAD_METHOD              4 (warning)
+            126 LOAD_CONST               1 ("Non-numeric grade entered: '")
+            128 LOAD_FAST                0 (grade_str)
+            130 FORMAT_VALUE             0
+            132 LOAD_CONST               2 ("'")
+            134 BUILD_STRING             3
+            136 PRECALL                  1
+            140 CALL                     1
+            150 POP_TOP
+
+ 54         152 LOAD_GLOBAL              5 (NULL + ValueError)
+            164 LOAD_CONST               3 ('Grade must be a numeric value.')
+            166 PRECALL                  1
+            170 CALL                     1
+            180 RAISE_VARARGS            1
+
+ 52     >>  182 RERAISE                  0
+        >>  184 COPY                     3
+            186 POP_EXCEPT
+            188 RERAISE                  1
+
+ 55     >>  190 LOAD_CONST               4 (0.0)
+            192 LOAD_FAST                1 (grade)
+            194 SWAP                     2
+            196 COPY                     2
+            198 COMPARE_OP               1 (<=)
+            204 POP_JUMP_FORWARD_IF_FALSE     6 (to 218)
+            206 LOAD_CONST               5 (4.0)
+            208 COMPARE_OP               1 (<=)
+            214 POP_JUMP_FORWARD_IF_TRUE    46 (to 308)
+            216 JUMP_FORWARD             1 (to 220)
+        >>  218 POP_TOP
+
+ 56     >>  220 LOAD_GLOBAL              6 (logger)
+            232 LOAD_METHOD              4 (warning)
+            254 LOAD_CONST               6 ('Grade out of range: ')
+            256 LOAD_FAST                1 (grade)
+            258 FORMAT_VALUE             0
+            260 BUILD_STRING             2
+            262 PRECALL                  1
+            266 CALL                     1
+            276 POP_TOP
+
+ 57         278 LOAD_GLOBAL              5 (NULL + ValueError)
+            290 LOAD_CONST               7 ('Grade (GPA) must be between 0.0 and 4.0.')
+            292 PRECALL                  1
+            296 CALL                     1
+            306 RAISE_VARARGS            1
+
+ 58     >>  308 LOAD_GLOBAL             11 (NULL + round)
+            320 LOAD_FAST                1 (grade)
+            322 LOAD_CONST               8 (2)
+            324 PRECALL                  2
+            328 CALL                     2
+            338 RETURN_VALUE
+ExceptionTable:
+  4 to 68 -> 72 [0]
+  72 to 182 -> 184 [1] lasti
+
+Disassembly of <code object validate_major at 0x000001FD36E01620, file "C:\Users\Dell\Desktop\maintenance\utils\validators.py", line 61>:
+ 61           0 RESUME                   0
+
+ 66           2 LOAD_FAST                0 (major)
+              4 LOAD_METHOD              0 (strip)
+             26 PRECALL                  0
+             30 CALL                     0
+             40 STORE_FAST               0 (major)
+
+ 67          42 LOAD_GLOBAL              3 (NULL + len)
+             54 LOAD_FAST                0 (major)
+             56 PRECALL                  1
+             60 CALL                     1
+             70 LOAD_CONST               1 (2)
+             72 COMPARE_OP               0 (<)
+             78 POP_JUMP_FORWARD_IF_TRUE    19 (to 118)
+             80 LOAD_GLOBAL              3 (NULL + len)
+             92 LOAD_FAST                0 (major)
+             94 PRECALL                  1
+             98 CALL                     1
+            108 LOAD_CONST               2 (80)
+            110 COMPARE_OP               4 (>)
+            116 POP_JUMP_FORWARD_IF_FALSE    45 (to 208)
+
+ 68     >>  118 LOAD_GLOBAL              4 (logger)
+            130 LOAD_METHOD              3 (warning)
+            152 LOAD_CONST               3 ("Major length out of range: '")
+            154 LOAD_FAST                0 (major)
+            156 FORMAT_VALUE             0
+            158 LOAD_CONST               4 ("'")
+            160 BUILD_STRING             3
+            162 PRECALL                  1
+            166 CALL                     1
+            176 POP_TOP
+
+ 69         178 LOAD_GLOBAL              9 (NULL + ValueError)
+            190 LOAD_CONST               5 ('Major must be between 2 and 80 characters.')
+            192 PRECALL                  1
+            196 CALL                     1
+            206 RAISE_VARARGS            1
+
+ 70     >>  208 LOAD_FAST                0 (major)
+            210 LOAD_METHOD              5 (title)
+            232 PRECALL                  0
+            236 CALL                     0
+            246 RETURN_VALUE
+
+Disassembly of <code object validate_menu_choice at 0x000001FD3722D480, file "C:\Users\Dell\Desktop\maintenance\utils\validators.py", line 73>:
+ 73           0 RESUME                   0
+
+ 77           2 NOP
+
+ 78           4 LOAD_GLOBAL              1 (NULL + int)
+             16 LOAD_FAST                0 (raw)
+             18 LOAD_METHOD              1 (strip)
+             40 PRECALL                  0
+             44 CALL                     0
+             54 PRECALL                  1
+             58 CALL                     1
+             68 STORE_FAST               3 (choice)
+             70 JUMP_FORWARD            29 (to 130)
+        >>   72 PUSH_EXC_INFO
+
+ 79          74 LOAD_GLOBAL              4 (ValueError)
+             86 CHECK_EXC_MATCH
+             88 POP_JUMP_FORWARD_IF_FALSE    16 (to 122)
+             90 POP_TOP
+
+ 80          92 LOAD_GLOBAL              5 (NULL + ValueError)
+            104 LOAD_CONST               1 ('Please enter a whole number.')
+            106 PRECALL                  1
+            110 CALL                     1
+            120 RAISE_VARARGS            1
+
+ 79     >>  122 RERAISE                  0
+        >>  124 COPY                     3
+            126 POP_EXCEPT
+            128 RERAISE                  1
+
+ 81     >>  130 LOAD_FAST                1 (low)
+            132 LOAD_FAST                3 (choice)
+            134 SWAP                     2
+            136 COPY                     2
+            138 COMPARE_OP               1 (<=)
+            144 POP_JUMP_FORWARD_IF_FALSE     6 (to 158)
+            146 LOAD_FAST                2 (high)
+            148 COMPARE_OP               1 (<=)
+            154 POP_JUMP_FORWARD_IF_TRUE    24 (to 204)
+            156 JUMP_FORWARD             1 (to 160)
+        >>  158 POP_TOP
+
+ 82     >>  160 LOAD_GLOBAL              5 (NULL + ValueError)
+            172 LOAD_CONST               2 ('Please enter a number between ')
+            174 LOAD_FAST                1 (low)
+            176 FORMAT_VALUE             0
+            178 LOAD_CONST               3 (' and ')
+            180 LOAD_FAST                2 (high)
+            182 FORMAT_VALUE             0
+            184 LOAD_CONST               4 ('.')
+            186 BUILD_STRING             5
+            188 PRECALL                  1
+            192 CALL                     1
+            202 RAISE_VARARGS            1
+
+ 83     >>  204 LOAD_FAST                3 (choice)
+            206 RETURN_VALUE
+ExceptionTable:
+  4 to 68 -> 72 [0]
+  72 to 122 -> 124 [1] lasti
