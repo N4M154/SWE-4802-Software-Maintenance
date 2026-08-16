@@ -1,0 +1,90 @@
+[
+  {
+    "name": "Yugesh Kumar",
+    "student_id": "STU001",
+    "grade": 3.8,
+    "major": "Computer Science",
+    "enrolled": true,
+    "created_at": "2024-09-01T08:00:00"
+  },
+  {
+    "name": "Kishor Patel",
+    "student_id": "STU002",
+    "grade": 3.2,
+    "major": "Electrical Engineering",
+    "enrolled": true,
+    "created_at": "2024-09-01T08:05:00"
+  },
+  {
+    "name": "Gajen Silva",
+    "student_id": "STU003",
+    "grade": 2.5,
+    "major": "Mathematics",
+    "enrolled": true,
+    "created_at": "2024-09-01T08:10:00"
+  },
+  {
+    "name": "Gopi Nair",
+    "student_id": "STU004",
+    "grade": 1.8,
+    "major": "Physics",
+    "enrolled": true,
+    "created_at": "2024-09-01T08:15:00"
+  },
+  {
+    "name": "Amara Hassan",
+    "student_id": "STU005",
+    "grade": 3.95,
+    "major": "Computer Science",
+    "enrolled": true,
+    "created_at": "2024-09-02T09:00:00"
+  },
+  {
+    "name": "Namisa",
+    "student_id": "STU0002",
+    "grade": 3.8,
+    "major": "Swe",
+    "enrolled": true,
+    "created_at": "2026-06-11T18:39:52.606491"
+  },
+  {
+    "name": "Namisa",
+    "student_id": "STU003",
+    "grade": 3.8,
+    "major": "Swe",
+    "enrolled": true,
+    "created_at": "2026-06-11T18:39:52.606491"
+  },
+  {
+    "name": "Namisa",
+    "student_id": "STU004",
+    "grade": 3.8,
+    "major": "Swe",
+    "enrolled": true,
+    "created_at": "2026-06-11T18:39:52.606491"
+  },
+  {
+    "name": "Namisa",
+    "student_id": "STU005",
+    "grade": 3.8,
+    "major": "Swe",
+    "enrolled": true,
+    "created_at": "2026-06-11T18:39:52.606491"
+  },
+  {
+    "name": "Namisa",
+    "student_id": "STU006",
+    "grade": 3.8,
+    "major": "Swe",
+    "enrolled": true,
+    "created_at": "2026-06-11T18:39:52.606491"
+  },
+  {
+    "name": "Namisa",
+    "student_id": "STU007",
+    "grade": 3.8,
+    "major": "Swe",
+    "enrolled": true,
+    "created_at": "2026-06-11T18:39:52.606491"
+  }
+]

@@ -15,3 +15,4 @@
 
 - Extracted GPA classification thresholds in `Student.classification()`
   into named module-level constants.
+- View all students now supports sorting by major and pages 4 results 10 at a time instead of printing the full list at once.
