@@ -1,0 +1,369 @@
+Source path:... C:\Users\Dell\Desktop\maintenance\services\student_service.py
+Starting var:.. enrolled_only = False
+18:32:26.605328 call        54 def list_students(enrolled_only: bool = False) -> List[Student]:
+18:32:26.607846 line        59     logger.info(f"Listing students (enrolled_only={enrolled_only}).")
+18:32:26.608847 line        60     students = _load_data()
+New var:....... students = []
+18:32:26.609847 line        61     if enrolled_only:
+18:32:26.610850 line        63     logger.debug(f"Returning {len(students)} student(s).")
+18:32:26.612251 line        64     return students
+18:32:26.613261 return      64     return students
+Return value:.. []
+Elapsed time: 00:00:00.007933
+Source path:... C:\Users\Dell\Desktop\maintenance\services\student_service.py
+Starting var:.. name = 'namisa'
+Starting var:.. student_id = '210042112'
+Starting var:.. grade = '3.88'
+Starting var:.. major = 'swe'
+18:32:45.365426 call        68 def add_student(name: str, student_id: str, grade: str, major: str) -> Student:
+18:32:45.367944 line        73     logger.info(f"Attempting to add student: name='{name}', id='{student_id}'.")
+18:32:45.367944 line        76     name       = validate_name(name)
+Modified var:.. name = 'Namisa'
+18:32:45.368947 line        77     student_id = validate_student_id(student_id)
+18:32:45.370950 exception   77     student_id = validate_student_id(student_id)
+Exception:..... ValueError: Student ID must start with 1-4 letters followed by 2-8 digits (e.g. STU001).
+Call ended by exception
+Elapsed time: 00:00:00.006517
+Starting var:.. enrolled_only = False
+18:32:50.680590 call        54 def list_students(enrolled_only: bool = False) -> List[Student]:
+18:32:50.681595 line        59     logger.info(f"Listing students (enrolled_only={enrolled_only}).")
+18:32:50.681595 line        60     students = _load_data()
+New var:....... students = []
+18:32:50.682592 line        61     if enrolled_only:
+18:32:50.683610 line        63     logger.debug(f"Returning {len(students)} student(s).")
+18:32:50.684612 line        64     return students
+18:32:50.684612 return      64     return students
+Return value:.. []
+Elapsed time: 00:00:00.005000
+Starting var:.. name = 'namisa'
+Starting var:.. student_id = '1243'
+Starting var:.. grade = '3.8'
+Starting var:.. major = 'swe'
+18:33:03.529772 call        68 def add_student(name: str, student_id: str, grade: str, major: str) -> Student:
+18:33:03.530773 line        73     logger.info(f"Attempting to add student: name='{name}', id='{student_id}'.")
+18:33:03.532000 line        76     name       = validate_name(name)
+Modified var:.. name = 'Namisa'
+18:33:03.532000 line        77     student_id = validate_student_id(student_id)
+18:33:03.533010 exception   77     student_id = validate_student_id(student_id)
+Exception:..... ValueError: Student ID must start with 1-4 letters followed by 2-8 digits (e.g. STU001).
+Call ended by exception
+Elapsed time: 00:00:00.004236
+Starting var:.. name = 'namisa'
+Starting var:.. student_id = 'stu0001'
+Starting var:.. grade = '3.8'
+Starting var:.. major = 'swe'
+18:33:17.849663 call        68 def add_student(name: str, student_id: str, grade: str, major: str) -> Student:
+18:33:17.851675 line        73     logger.info(f"Attempting to add student: name='{name}', id='{student_id}'.")
+18:33:17.852662 line        76     name       = validate_name(name)
+Modified var:.. name = 'Namisa'
+18:33:17.853668 line        77     student_id = validate_student_id(student_id)
+Modified var:.. student_id = 'STU0001'
+18:33:17.853668 line        78     grade_val  = validate_grade(grade)
+New var:....... grade_val = 3.8
+18:33:17.853668 line        79     major      = validate_major(major)
+Modified var:.. major = 'Swe'
+18:33:17.855031 line        81     students = _load_data()
+New var:....... students = []
+18:33:17.855031 line        84     existing_ids = [s.student_id for s in students]
+New var:....... existing_ids = []
+18:33:17.856546 line        85     if student_id in existing_ids:
+18:33:17.857555 line        89     new_student = Student(name=name, student_id=student_id, grade=grade_val, major=major)
+New var:....... new_student = Student(name='Namisa', student_id='STU0001', gra...ed=True, created_at='2026-06-11T18:33:17.857555')
+18:33:17.857555 line        90     students.append(new_student)
+Modified var:.. students = [Student(name='Namisa', student_id='STU0001', gr...d=True, created_at='2026-06-11T18:33:17.857555')]
+18:33:17.858554 line        91     _save_data(students)
+18:33:17.860865 line        93     logger.success(f"Added: {new_student}")
+18:33:17.860865 line        94     return new_student
+18:33:17.861868 return      94     return new_student
+Return value:.. Student(name='Namisa', student_id='STU0001', gra...ed=True, created_at='2026-06-11T18:33:17.857555')
+Elapsed time: 00:00:00.013654
+Starting var:.. enrolled_only = False
+18:33:22.120923 call        54 def list_students(enrolled_only: bool = False) -> List[Student]:
+18:33:22.121927 line        59     logger.info(f"Listing students (enrolled_only={enrolled_only}).")
+18:33:22.122932 line        60     students = _load_data()
+New var:....... students = [Student(name='Namisa', student_id='STU0001', gr...d=True, created_at='2026-06-11T18:33:17.857555')]
+18:33:22.131448 line        61     if enrolled_only:
+18:33:22.132514 line        63     logger.debug(f"Returning {len(students)} student(s).")
+18:33:22.133526 line        64     return students
+18:33:22.133526 return      64     return students
+Return value:.. [Student(name='Namisa', student_id='STU0001', gr...d=True, created_at='2026-06-11T18:33:17.857555')]
+Elapsed time: 00:00:00.013602
+Starting var:.. enrolled_only = False
+18:38:37.115114 call        54 def list_students(enrolled_only: bool = False) -> List[Student]:
+18:38:37.116625 line        59     logger.info(f"Listing students (enrolled_only={enrolled_only}).")
+18:38:37.117709 line        60     students = _load_data()
+New var:....... students = [Student(name='Yugesh Kumar', student_id='STU001...enrolled=True, created_at='2024-09-02T09:00:00')]
+18:38:37.128876 line        61     if enrolled_only:
+18:38:37.130080 line        63     logger.debug(f"Returning {len(students)} student(s).")
+18:38:37.131093 line        64     return students
+18:38:37.131093 return      64     return students
+Return value:.. [Student(name='Yugesh Kumar', student_id='STU001...enrolled=True, created_at='2024-09-02T09:00:00')]
+Elapsed time: 00:00:00.017299
+Starting var:.. enrolled_only = False
+18:39:19.356727 call        54 def list_students(enrolled_only: bool = False) -> List[Student]:
+18:39:19.356727 line        59     logger.info(f"Listing students (enrolled_only={enrolled_only}).")
+18:39:19.358143 line        60     students = _load_data()
+New var:....... students = [Student(name='Yugesh Kumar', student_id='STU001...enrolled=True, created_at='2024-09-02T09:00:00')]
+18:39:19.359142 line        61     if enrolled_only:
+18:39:19.360140 line        63     logger.debug(f"Returning {len(students)} student(s).")
+18:39:19.360140 line        64     return students
+18:39:19.361165 return      64     return students
+Return value:.. [Student(name='Yugesh Kumar', student_id='STU001...enrolled=True, created_at='2024-09-02T09:00:00')]
+Elapsed time: 00:00:00.004438
+Starting var:.. name = 'namisa'
+Starting var:.. student_id = 'stu0002'
+Starting var:.. grade = '..8'
+Starting var:.. major = 'swe'
+18:39:30.889358 call        68 def add_student(name: str, student_id: str, grade: str, major: str) -> Student:
+18:39:30.890930 line        73     logger.info(f"Attempting to add student: name='{name}', id='{student_id}'.")
+18:39:30.892470 line        76     name       = validate_name(name)
+Modified var:.. name = 'Namisa'
+18:39:30.892470 line        77     student_id = validate_student_id(student_id)
+Modified var:.. student_id = 'STU0002'
+18:39:30.894006 line        78     grade_val  = validate_grade(grade)
+18:39:30.894006 exception   78     grade_val  = validate_grade(grade)
+Exception:..... ValueError: Grade must be a numeric value.
+Call ended by exception
+Elapsed time: 00:00:00.007194
+Starting var:.. name = 'namisa'
+Starting var:.. student_id = 'stu0002'
+Starting var:.. grade = '3.8'
+Starting var:.. major = 'swe'
+18:39:52.599380 call        68 def add_student(name: str, student_id: str, grade: str, major: str) -> Student:
+18:39:52.600383 line        73     logger.info(f"Attempting to add student: name='{name}', id='{student_id}'.")
+18:39:52.601627 line        76     name       = validate_name(name)
+Modified var:.. name = 'Namisa'
+18:39:52.601627 line        77     student_id = validate_student_id(student_id)
+Modified var:.. student_id = 'STU0002'
+18:39:52.602636 line        78     grade_val  = validate_grade(grade)
+New var:....... grade_val = 3.8
+18:39:52.602636 line        79     major      = validate_major(major)
+Modified var:.. major = 'Swe'
+18:39:52.602636 line        81     students = _load_data()
+New var:....... students = [Student(name='Yugesh Kumar', student_id='STU001...enrolled=True, created_at='2024-09-02T09:00:00')]
+18:39:52.603974 line        84     existing_ids = [s.student_id for s in students]
+New var:....... existing_ids = ['STU001', 'STU002', 'STU003', 'STU004', 'STU005']
+18:39:52.604982 line        85     if student_id in existing_ids:
+18:39:52.604982 line        89     new_student = Student(name=name, student_id=student_id, grade=grade_val, major=major)
+New var:....... new_student = Student(name='Namisa', student_id='STU0002', gra...ed=True, created_at='2026-06-11T18:39:52.606491')
+18:39:52.606491 line        90     students.append(new_student)
+Modified var:.. students = [Student(name='Yugesh Kumar', student_id='STU001...d=True, created_at='2026-06-11T18:39:52.606491')]
+18:39:52.606491 line        91     _save_data(students)
+18:39:52.608999 line        93     logger.success(f"Added: {new_student}")
+18:39:52.609906 line        94     return new_student
+18:39:52.610939 return      94     return new_student
+Return value:.. Student(name='Namisa', student_id='STU0002', gra...ed=True, created_at='2026-06-11T18:39:52.606491')
+Elapsed time: 00:00:00.013661
+Starting var:.. enrolled_only = False
+18:39:56.249596 call        54 def list_students(enrolled_only: bool = False) -> List[Student]:
+18:39:56.250595 line        59     logger.info(f"Listing students (enrolled_only={enrolled_only}).")
+18:39:56.251596 line        60     students = _load_data()
+New var:....... students = [Student(name='Yugesh Kumar', student_id='STU001...d=True, created_at='2026-06-11T18:39:52.606491')]
+18:39:56.317895 line        61     if enrolled_only:
+18:39:56.318821 line        63     logger.debug(f"Returning {len(students)} student(s).")
+18:39:56.319797 line        64     return students
+18:39:56.319797 return      64     return students
+Return value:.. [Student(name='Yugesh Kumar', student_id='STU001...d=True, created_at='2026-06-11T18:39:52.606491')]
+Elapsed time: 00:00:00.071186
+Starting var:.. enrolled_only = False
+18:40:11.578302 call        54 def list_students(enrolled_only: bool = False) -> List[Student]:
+18:40:11.579304 line        59     logger.info(f"Listing students (enrolled_only={enrolled_only}).")
+18:40:11.580501 line        60     students = _load_data()
+New var:....... students = [Student(name='Yugesh Kumar', student_id='STU001...d=True, created_at='2026-06-11T18:39:52.606491')]
+18:40:11.581511 line        61     if enrolled_only:
+18:40:11.582538 line        63     logger.debug(f"Returning {len(students)} student(s).")
+18:40:11.582538 line        64     return students
+18:40:11.583509 return      64     return students
+Return value:.. [Student(name='Yugesh Kumar', student_id='STU001...d=True, created_at='2026-06-11T18:39:52.606491')]
+Elapsed time: 00:00:00.005207
+Starting var:.. enrolled_only = False
+18:40:24.277427 call        54 def list_students(enrolled_only: bool = False) -> List[Student]:
+18:40:24.278494 line        59     logger.info(f"Listing students (enrolled_only={enrolled_only}).")
+18:40:24.279402 line        60     students = _load_data()
+New var:....... students = [Student(name='Yugesh Kumar', student_id='STU001...d=True, created_at='2026-06-11T18:39:52.606491')]
+18:40:24.280385 line        61     if enrolled_only:
+18:40:24.281476 line        63     logger.debug(f"Returning {len(students)} student(s).")
+18:40:24.282383 line        64     return students
+18:40:24.283437 return      64     return students
+Return value:.. [Student(name='Yugesh Kumar', student_id='STU001...d=True, created_at='2026-06-11T18:39:52.606491')]
+Elapsed time: 00:00:00.007019
+Source path:... C:\Users\Dell\Desktop\maintenance\services\student_service.py
+Starting var:.. student_id = ''
+Starting var:.. name = None
+Starting var:.. grade = None
+Starting var:.. major = None
+18:40:33.857551 call       141 def update_student(student_id: str, name: str = None, grade: str = None, major: str = None) -> Student:
+18:40:33.858701 line       146     logger.info(f"Attempting to update student ID: '{student_id}'.")
+18:40:33.860061 line       147     student_id = student_id.strip().upper()
+18:40:33.861068 line       148     students = _load_data()
+New var:....... students = [Student(name='Yugesh Kumar', student_id='STU001...d=True, created_at='2026-06-11T18:39:52.606491')]
+18:40:33.862068 line       150     target: Optional[Student] = None
+New var:....... target = None
+18:40:33.862068 line       151     for s in students:
+New var:....... s = Student(name='Yugesh Kumar', student_id='STU001'... enrolled=True, created_at='2024-09-01T08:00:00')
+18:40:33.863070 line       152         if s.student_id == student_id:
+18:40:33.864069 line       151     for s in students:
+Modified var:.. s = Student(name='Kishor Patel', student_id='STU002'... enrolled=True, created_at='2024-09-01T08:05:00')
+18:40:33.864069 line       152         if s.student_id == student_id:
+18:40:33.865069 line       151     for s in students:
+Modified var:.. s = Student(name='Gajen Silva', student_id='STU003',... enrolled=True, created_at='2024-09-01T08:10:00')
+18:40:33.865069 line       152         if s.student_id == student_id:
+18:40:33.866206 line       151     for s in students:
+Modified var:.. s = Student(name='Gopi Nair', student_id='STU004', g... enrolled=True, created_at='2024-09-01T08:15:00')
+18:40:33.866206 line       152         if s.student_id == student_id:
+18:40:33.867213 line       151     for s in students:
+Modified var:.. s = Student(name='Amara Hassan', student_id='STU005'... enrolled=True, created_at='2024-09-02T09:00:00')
+18:40:33.867213 line       152         if s.student_id == student_id:
+18:40:33.868461 line       151     for s in students:
+Modified var:.. s = Student(name='Namisa', student_id='STU0002', gra...ed=True, created_at='2026-06-11T18:39:52.606491')
+18:40:33.868970 line       152         if s.student_id == student_id:
+18:40:33.868970 line       151     for s in students:
+18:40:33.868970 line       156     if target is None:
+18:40:33.868970 line       157         logger.error(f"Student ID '{student_id}' not found for update.")
+18:40:33.871482 line       158         raise ValueError(f"No student found with ID '{student_id}'.")
+18:40:33.872486 exception  158         raise ValueError(f"No student found with ID '{student_id}'.")
+Exception:..... ValueError: No student found with ID ''.
+Call ended by exception
+Elapsed time: 00:00:00.015930
+Source path:... C:\Users\Dell\Desktop\maintenance\services\student_service.py
+Starting var:.. enrolled_only = False
+18:41:06.173190 call        54 def list_students(enrolled_only: bool = False) -> List[Student]:
+18:41:06.175187 line        59     logger.info(f"Listing students (enrolled_only={enrolled_only}).")
+18:41:06.176712 line        60     students = _load_data()
+New var:....... students = [Student(name='Yugesh Kumar', student_id='STU001...d=True, created_at='2026-06-11T18:39:52.606491')]
+18:41:06.179056 line        61     if enrolled_only:
+18:41:06.180055 line        63     logger.debug(f"Returning {len(students)} student(s).")
+18:41:06.181106 line        64     return students
+18:41:06.181106 return      64     return students
+Return value:.. [Student(name='Yugesh Kumar', student_id='STU001...d=True, created_at='2026-06-11T18:39:52.606491')]
+Elapsed time: 00:00:00.008864
+Starting var:.. enrolled_only = False
+18:41:08.354336 call        54 def list_students(enrolled_only: bool = False) -> List[Student]:
+18:41:08.355490 line        59     logger.info(f"Listing students (enrolled_only={enrolled_only}).")
+18:41:08.356497 line        60     students = _load_data()
+New var:....... students = [Student(name='Yugesh Kumar', student_id='STU001...d=True, created_at='2026-06-11T18:39:52.606491')]
+18:41:08.358018 line        61     if enrolled_only:
+18:41:08.358018 line        63     logger.debug(f"Returning {len(students)} student(s).")
+18:41:08.359016 line        64     return students
+18:41:08.360022 return      64     return students
+Return value:.. [Student(name='Yugesh Kumar', student_id='STU001...d=True, created_at='2026-06-11T18:39:52.606491')]
+Elapsed time: 00:00:00.006683
+Source path:... C:\Users\Dell\Desktop\maintenance\services\student_service.py
+Starting var:.. enrolled_only = False
+18:41:34.607324 call        54 def list_students(enrolled_only: bool = False) -> List[Student]:
+18:41:34.609583 line        59     logger.info(f"Listing students (enrolled_only={enrolled_only}).")
+18:41:34.610592 line        60     students = _load_data()
+New var:....... students = [Student(name='Yugesh Kumar', student_id='STU001...d=True, created_at='2026-06-11T18:39:52.606491')]
+18:41:34.612593 line        61     if enrolled_only:
+18:41:34.613594 line        63     logger.debug(f"Returning {len(students)} student(s).")
+18:41:34.614593 line        64     return students
+18:41:34.615593 return      64     return students
+Return value:.. [Student(name='Yugesh Kumar', student_id='STU001...d=True, created_at='2026-06-11T18:39:52.606491')]
+Elapsed time: 00:00:00.009270
+Source path:... C:\Users\Dell\Desktop\maintenance\services\student_service.py
+Starting var:.. enrolled_only = False
+21:09:37.201435 call        54 def list_students(enrolled_only: bool = False) -> List[Student]:
+21:09:37.204944 line        59     logger.info(f"Listing students (enrolled_only={enrolled_only}).")
+21:09:37.205944 line        60     students = _load_data()
+New var:....... students = [Student(name='Yugesh Kumar', student_id='STU001...d=True, created_at='2026-06-11T18:39:52.606491')]
+21:09:37.221838 line        61     if enrolled_only:
+21:09:37.222854 line        63     logger.debug(f"Returning {len(students)} student(s).")
+21:09:37.223837 line        64     return students
+21:09:37.223837 return      64     return students
+Return value:.. [Student(name='Yugesh Kumar', student_id='STU001...d=True, created_at='2026-06-11T18:39:52.606491')]
+Elapsed time: 00:00:00.022402
+Source path:... C:\Users\Dell\Desktop\maintenance\services\student_service.py
+Starting var:.. enrolled_only = False
+10:55:43.423662 call        54 def list_students(enrolled_only: bool = False) -> List[Student]:
+10:55:43.462142 line        59     logger.info(f"Listing students (enrolled_only={enrolled_only}).")
+10:55:43.463190 line        60     students = _load_data()
+New var:....... students = [Student(name='Yugesh Kumar', student_id='STU001...d=True, created_at='2026-06-11T18:39:52.606491')]
+10:55:43.465151 line        61     if enrolled_only:
+10:55:43.466159 line        63     logger.debug(f"Returning {len(students)} student(s).")
+10:55:43.467154 line        64     return students
+10:55:43.467154 return      64     return students
+Return value:.. [Student(name='Yugesh Kumar', student_id='STU001...d=True, created_at='2026-06-11T18:39:52.606491')]
+Elapsed time: 00:00:00.044492
+Starting var:.. enrolled_only = False
+11:08:22.925010 call        54 def list_students(enrolled_only: bool = False) -> List[Student]:
+11:08:22.927001 line        59     logger.info(f"Listing students (enrolled_only={enrolled_only}).")
+11:08:22.928000 line        60     students = _load_data()
+New var:....... students = [Student(name='Yugesh Kumar', student_id='STU001...d=True, created_at='2026-06-11T18:39:52.606491')]
+11:08:22.929000 line        61     if enrolled_only:
+11:08:22.930001 line        63     logger.debug(f"Returning {len(students)} student(s).")
+11:08:22.931006 line        64     return students
+11:08:22.931999 return      64     return students
+Return value:.. [Student(name='Yugesh Kumar', student_id='STU001...d=True, created_at='2026-06-11T18:39:52.606491')]
+Elapsed time: 00:00:00.006989
+Source path:... C:\Users\Dell\Desktop\maintenance\services\student_service.py
+Starting var:.. enrolled_only = False
+11:16:24.065538 call        54 def list_students(enrolled_only: bool = False) -> List[Student]:
+11:16:24.068531 line        59     logger.info(f"Listing students (enrolled_only={enrolled_only}).")
+11:16:24.069530 line        60     students = _load_data()
+New var:....... students = [Student(name='Yugesh Kumar', student_id='STU001...d=True, created_at='2026-06-11T18:39:52.606491')]
+11:16:24.070530 line        61     if enrolled_only:
+11:16:24.071532 line        63     logger.debug(f"Returning {len(students)} student(s).")
+11:16:24.073530 line        64     return students
+11:16:24.073530 return      64     return students
+Return value:.. [Student(name='Yugesh Kumar', student_id='STU001...d=True, created_at='2026-06-11T18:39:52.606491')]
+Elapsed time: 00:00:00.009357
+Source path:... C:\Users\Dell\Desktop\maintenance\services\student_service.py
+Starting var:.. enrolled_only = False
+11:16:50.275705 call        54 def list_students(enrolled_only: bool = False) -> List[Student]:
+11:16:50.277710 line        59     logger.info(f"Listing students (enrolled_only={enrolled_only}).")
+11:16:50.278698 line        60     students = _load_data()
+New var:....... students = [Student(name='Yugesh Kumar', student_id='STU001...d=True, created_at='2026-06-11T18:39:52.606491')]
+11:16:50.280711 line        61     if enrolled_only:
+11:16:50.281704 line        63     logger.debug(f"Returning {len(students)} student(s).")
+11:16:50.282695 line        64     return students
+11:16:50.282695 return      64     return students
+Return value:.. [Student(name='Yugesh Kumar', student_id='STU001...d=True, created_at='2026-06-11T18:39:52.606491')]
+Elapsed time: 00:00:00.007991
+Source path:... C:\Users\Dell\Desktop\maintenance\services\student_service.py
+Starting var:.. enrolled_only = False
+11:24:50.273038 call        54 def list_students(enrolled_only: bool = False) -> List[Student]:
+11:24:50.275228 line        59     logger.info(f"Listing students (enrolled_only={enrolled_only}).")
+11:24:50.276295 line        60     students = _load_data()
+New var:....... students = [Student(name='Yugesh Kumar', student_id='STU001...d=True, created_at='2026-06-11T18:39:52.606491')]
+11:24:50.278328 line        61     if enrolled_only:
+11:24:50.279403 line        63     logger.debug(f"Returning {len(students)} student(s).")
+11:24:50.280316 line        64     return students
+11:24:50.280316 return      64     return students
+Return value:.. [Student(name='Yugesh Kumar', student_id='STU001...d=True, created_at='2026-06-11T18:39:52.606491')]
+Elapsed time: 00:00:00.008443
+Source path:... C:\Users\Dell\Desktop\maintenance\services\student_service.py
+Starting var:.. enrolled_only = False
+11:29:10.188022 call        54 def list_students(enrolled_only: bool = False) -> List[Student]:
+11:29:10.190010 line        59     logger.info(f"Listing students (enrolled_only={enrolled_only}).")
+11:29:10.192006 line        60     students = _load_data()
+New var:....... students = [Student(name='Yugesh Kumar', student_id='STU001...d=True, created_at='2026-06-11T18:39:52.606491')]
+11:29:10.193007 line        61     if enrolled_only:
+11:29:10.194005 line        63     logger.debug(f"Returning {len(students)} student(s).")
+11:29:10.195013 line        64     return students
+11:29:10.195013 return      64     return students
+Return value:.. [Student(name='Yugesh Kumar', student_id='STU001...d=True, created_at='2026-06-11T18:39:52.606491')]
+Elapsed time: 00:00:00.007984
+Source path:... C:\Users\Dell\Desktop\maintenance\services\student_service.py
+Starting var:.. enrolled_only = False
+00:39:22.888588 call        54 def list_students(enrolled_only: bool = False) -> List[Student]:
+00:39:22.907745 line        59     logger.info(f"Listing students (enrolled_only={enrolled_only}).")
+00:39:22.908756 line        60     students = _load_data()
+New var:....... students = [Student(name='Yugesh Kumar', student_id='STU001...d=True, created_at='2026-06-11T18:39:52.606491')]
+00:39:22.919209 line        61     if enrolled_only:
+00:39:22.920216 line        63     logger.debug(f"Returning {len(students)} student(s).")
+00:39:22.921218 line        64     return students
+00:39:22.921218 return      64     return students
+Return value:.. [Student(name='Yugesh Kumar', student_id='STU001...d=True, created_at='2026-06-11T18:39:52.606491')]
+Elapsed time: 00:00:00.034071
+Source path:... C:\Users\Dell\Desktop\maintenance\perfective\services\student_service.py
+Starting var:.. enrolled_only = False
+23:32:34.130020 call        72 def list_students(enrolled_only: bool = False) -> List[Student]:
+23:32:34.167178 line        77     logger.info(f"Listing students (enrolled_only={enrolled_only}).")
+23:32:34.168219 line        78     students = _load_data()
+New var:....... students = [Student(name='Yugesh Kumar', student_id='STU001...d=True, created_at='2026-06-11T18:39:52.606491')]
+23:32:34.187174 line        79     if enrolled_only:
+23:32:34.188178 line        81     logger.debug(f"Returning {len(students)} student(s).")
+23:32:34.189179 line        82     return students
+23:32:34.189179 return      82     return students
+Return value:.. [Student(name='Yugesh Kumar', student_id='STU001...d=True, created_at='2026-06-11T18:39:52.606491')]
+Elapsed time: 00:00:00.060199

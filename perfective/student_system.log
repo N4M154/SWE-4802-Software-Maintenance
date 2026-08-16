@@ -1,0 +1,225 @@
+2026-06-11 18:32:19 | DEBUG    | utils.logger_setup:setup_logging:59 | Loguru logging initialised.
+2026-06-11 18:32:19 | INFO     | __main__:main:163 | Program started.
+2026-06-11 18:32:26 | DEBUG    | __main__:main:192 | Menu choice: 1
+2026-06-11 18:32:26 | INFO     | __main__:action_view:79 | User selected: View all students.
+2026-06-11 18:32:26 | INFO     | services.student_service:list_students:59 | Listing students (enrolled_only=False).
+2026-06-11 18:32:26 | DEBUG    | services.student_service:_load_data:29 | Data file not found at C:\Users\Dell\Desktop\maintenance\data\students.json; starting with empty list.
+2026-06-11 18:32:26 | DEBUG    | services.student_service:list_students:63 | Returning 0 student(s).
+2026-06-11 18:32:35 | DEBUG    | __main__:main:192 | Menu choice: 2
+2026-06-11 18:32:35 | INFO     | __main__:action_add:87 | User selected: Add new student.
+2026-06-11 18:32:45 | INFO     | services.student_service:add_student:73 | Attempting to add student: name='namisa', id='210042112'.
+2026-06-11 18:32:45 | WARNING  | utils.validators:validate_student_id:38 | Invalid student ID format: '210042112'
+2026-06-11 18:32:45 | WARNING  | __main__:action_add:97 | Add failed: Student ID must start with 1-4 letters followed by 2-8 digits (e.g. STU001).
+2026-06-11 18:32:50 | DEBUG    | __main__:main:192 | Menu choice: 1
+2026-06-11 18:32:50 | INFO     | __main__:action_view:79 | User selected: View all students.
+2026-06-11 18:32:50 | INFO     | services.student_service:list_students:59 | Listing students (enrolled_only=False).
+2026-06-11 18:32:50 | DEBUG    | services.student_service:_load_data:29 | Data file not found at C:\Users\Dell\Desktop\maintenance\data\students.json; starting with empty list.
+2026-06-11 18:32:50 | DEBUG    | services.student_service:list_students:63 | Returning 0 student(s).
+2026-06-11 18:32:53 | DEBUG    | __main__:main:192 | Menu choice: 2
+2026-06-11 18:32:53 | INFO     | __main__:action_add:87 | User selected: Add new student.
+2026-06-11 18:33:03 | INFO     | services.student_service:add_student:73 | Attempting to add student: name='namisa', id='1243'.
+2026-06-11 18:33:03 | WARNING  | utils.validators:validate_student_id:38 | Invalid student ID format: '1243'
+2026-06-11 18:33:03 | WARNING  | __main__:action_add:97 | Add failed: Student ID must start with 1-4 letters followed by 2-8 digits (e.g. STU001).
+2026-06-11 18:33:09 | DEBUG    | __main__:main:192 | Menu choice: 2
+2026-06-11 18:33:09 | INFO     | __main__:action_add:87 | User selected: Add new student.
+2026-06-11 18:33:17 | INFO     | services.student_service:add_student:73 | Attempting to add student: name='namisa', id='stu0001'.
+2026-06-11 18:33:17 | DEBUG    | services.student_service:_load_data:29 | Data file not found at C:\Users\Dell\Desktop\maintenance\data\students.json; starting with empty list.
+2026-06-11 18:33:17 | DEBUG    | services.student_service:_save_data:48 | Saved 1 student(s) to C:\Users\Dell\Desktop\maintenance\data\students.json.
+2026-06-11 18:33:17 | SUCCESS  | services.student_service:add_student:93 | Added: [STU0001] Namisa | Major: Swe | GPA: 3.80 | Status: Active | Standing: Distinction
+2026-06-11 18:33:22 | DEBUG    | __main__:main:192 | Menu choice: 1
+2026-06-11 18:33:22 | INFO     | __main__:action_view:79 | User selected: View all students.
+2026-06-11 18:33:22 | INFO     | services.student_service:list_students:59 | Listing students (enrolled_only=False).
+2026-06-11 18:33:22 | DEBUG    | services.student_service:_load_data:35 | Loaded 1 student(s) from C:\Users\Dell\Desktop\maintenance\data\students.json.
+2026-06-11 18:33:22 | DEBUG    | services.student_service:list_students:63 | Returning 1 student(s).
+2026-06-11 18:38:37 | DEBUG    | __main__:main:192 | Menu choice: 1
+2026-06-11 18:38:37 | INFO     | __main__:action_view:79 | User selected: View all students.
+2026-06-11 18:38:37 | INFO     | services.student_service:list_students:59 | Listing students (enrolled_only=False).
+2026-06-11 18:38:37 | DEBUG    | services.student_service:_load_data:35 | Loaded 5 student(s) from C:\Users\Dell\Desktop\maintenance\data\students.json.
+2026-06-11 18:38:37 | DEBUG    | services.student_service:list_students:63 | Returning 5 student(s).
+2026-06-11 18:39:19 | DEBUG    | __main__:main:192 | Menu choice: 1
+2026-06-11 18:39:19 | INFO     | __main__:action_view:79 | User selected: View all students.
+2026-06-11 18:39:19 | INFO     | services.student_service:list_students:59 | Listing students (enrolled_only=False).
+2026-06-11 18:39:19 | DEBUG    | services.student_service:_load_data:35 | Loaded 5 student(s) from C:\Users\Dell\Desktop\maintenance\data\students.json.
+2026-06-11 18:39:19 | DEBUG    | services.student_service:list_students:63 | Returning 5 student(s).
+2026-06-11 18:39:23 | DEBUG    | __main__:main:192 | Menu choice: 2
+2026-06-11 18:39:23 | INFO     | __main__:action_add:87 | User selected: Add new student.
+2026-06-11 18:39:30 | INFO     | services.student_service:add_student:73 | Attempting to add student: name='namisa', id='stu0002'.
+2026-06-11 18:39:30 | WARNING  | utils.validators:validate_grade:53 | Non-numeric grade entered: '..8'
+2026-06-11 18:39:30 | WARNING  | __main__:action_add:97 | Add failed: Grade must be a numeric value.
+2026-06-11 18:39:45 | DEBUG    | __main__:main:192 | Menu choice: 2
+2026-06-11 18:39:45 | INFO     | __main__:action_add:87 | User selected: Add new student.
+2026-06-11 18:39:52 | INFO     | services.student_service:add_student:73 | Attempting to add student: name='namisa', id='stu0002'.
+2026-06-11 18:39:52 | DEBUG    | services.student_service:_load_data:35 | Loaded 5 student(s) from C:\Users\Dell\Desktop\maintenance\data\students.json.
+2026-06-11 18:39:52 | DEBUG    | services.student_service:_save_data:48 | Saved 6 student(s) to C:\Users\Dell\Desktop\maintenance\data\students.json.
+2026-06-11 18:39:52 | SUCCESS  | services.student_service:add_student:93 | Added: [STU0002] Namisa | Major: Swe | GPA: 3.80 | Status: Active | Standing: Distinction
+2026-06-11 18:39:56 | DEBUG    | __main__:main:192 | Menu choice: 1
+2026-06-11 18:39:56 | INFO     | __main__:action_view:79 | User selected: View all students.
+2026-06-11 18:39:56 | INFO     | services.student_service:list_students:59 | Listing students (enrolled_only=False).
+2026-06-11 18:39:56 | DEBUG    | services.student_service:_load_data:35 | Loaded 6 student(s) from C:\Users\Dell\Desktop\maintenance\data\students.json.
+2026-06-11 18:39:56 | DEBUG    | services.student_service:list_students:63 | Returning 6 student(s).
+2026-06-11 18:40:08 | DEBUG    | __main__:main:192 | Menu choice: 7
+2026-06-11 18:40:08 | INFO     | __main__:action_sort:140 | User selected: Sort students.
+2026-06-11 18:40:11 | INFO     | services.student_service:list_students:59 | Listing students (enrolled_only=False).
+2026-06-11 18:40:11 | DEBUG    | services.student_service:_load_data:35 | Loaded 6 student(s) from C:\Users\Dell\Desktop\maintenance\data\students.json.
+2026-06-11 18:40:11 | DEBUG    | services.student_service:list_students:63 | Returning 6 student(s).
+2026-06-11 18:40:11 | DEBUG    | services.student_service:sort_by_grade:183 | Sorting 6 student(s) by grade (reverse=True).
+2026-06-11 18:40:24 | DEBUG    | __main__:main:192 | Menu choice: 6
+2026-06-11 18:40:24 | INFO     | services.report_service:print_full_report:81 | Generating full report.
+2026-06-11 18:40:24 | INFO     | services.student_service:list_students:59 | Listing students (enrolled_only=False).
+2026-06-11 18:40:24 | DEBUG    | services.student_service:_load_data:35 | Loaded 6 student(s) from C:\Users\Dell\Desktop\maintenance\data\students.json.
+2026-06-11 18:40:24 | DEBUG    | services.student_service:list_students:63 | Returning 6 student(s).
+2026-06-11 18:40:24 | INFO     | services.report_service:compute_stats:23 | Computing stats for 6 student(s).
+2026-06-11 18:40:24 | DEBUG    | services.report_service:compute_stats:41 | Stats: {'count': 6, 'average': 3.18, 'highest': 3.95, 'lowest': 1.8}
+2026-06-11 18:40:24 | INFO     | services.report_service:classify_students:50 | Classifying students by academic standing.
+2026-06-11 18:40:24 | DEBUG    | services.report_service:classify_students:60 |   STU001 → Distinction
+2026-06-11 18:40:24 | DEBUG    | services.report_service:classify_students:60 |   STU002 → Merit
+2026-06-11 18:40:24 | DEBUG    | services.report_service:classify_students:60 |   STU003 → Pass
+2026-06-11 18:40:24 | DEBUG    | services.report_service:classify_students:60 |   STU004 → At Risk
+2026-06-11 18:40:24 | DEBUG    | services.report_service:classify_students:60 |   STU005 → Distinction
+2026-06-11 18:40:24 | DEBUG    | services.report_service:classify_students:60 |   STU0002 → Distinction
+2026-06-11 18:40:24 | DEBUG    | services.student_service:sort_by_grade:183 | Sorting 6 student(s) by grade (reverse=True).
+2026-06-11 18:40:24 | INFO     | services.report_service:major_breakdown:66 | Computing major breakdown.
+2026-06-11 18:40:24 | DEBUG    | services.report_service:major_breakdown:71 | Major breakdown: {'Computer Science': 2, 'Electrical Engineering': 1, 'Mathematics': 1, 'Physics': 1, 'Swe': 1}
+2026-06-11 18:40:24 | SUCCESS  | services.report_service:print_full_report:122 | Full report printed.
+2026-06-11 18:40:29 | DEBUG    | __main__:main:192 | Menu choice: 5
+2026-06-11 18:40:29 | INFO     | __main__:action_update:124 | User selected: Update student.
+2026-06-11 18:40:33 | INFO     | services.student_service:update_student:146 | Attempting to update student ID: ''.
+2026-06-11 18:40:33 | DEBUG    | services.student_service:_load_data:35 | Loaded 6 student(s) from C:\Users\Dell\Desktop\maintenance\data\students.json.
+2026-06-11 18:40:33 | ERROR    | services.student_service:update_student:157 | Student ID '' not found for update.
+2026-06-11 18:40:33 | WARNING  | __main__:action_update:134 | Update failed: No student found with ID ''.
+2026-06-11 18:41:03 | DEBUG    | utils.logger_setup:setup_logging:59 | Loguru logging initialised.
+2026-06-11 18:41:03 | INFO     | __main__:main:163 | Program started.
+2026-06-11 18:41:06 | DEBUG    | __main__:main:192 | Menu choice: 1
+2026-06-11 18:41:06 | INFO     | __main__:action_view:79 | User selected: View all students.
+2026-06-11 18:41:06 | INFO     | services.student_service:list_students:59 | Listing students (enrolled_only=False).
+2026-06-11 18:41:06 | DEBUG    | services.student_service:_load_data:35 | Loaded 6 student(s) from C:\Users\Dell\Desktop\maintenance\data\students.json.
+2026-06-11 18:41:06 | DEBUG    | services.student_service:list_students:63 | Returning 6 student(s).
+2026-06-11 18:41:08 | DEBUG    | __main__:main:192 | Menu choice: 1
+2026-06-11 18:41:08 | INFO     | __main__:action_view:79 | User selected: View all students.
+2026-06-11 18:41:08 | INFO     | services.student_service:list_students:59 | Listing students (enrolled_only=False).
+2026-06-11 18:41:08 | DEBUG    | services.student_service:_load_data:35 | Loaded 6 student(s) from C:\Users\Dell\Desktop\maintenance\data\students.json.
+2026-06-11 18:41:08 | DEBUG    | services.student_service:list_students:63 | Returning 6 student(s).
+2026-06-11 18:41:32 | DEBUG    | utils.logger_setup:setup_logging:59 | Loguru logging initialised.
+2026-06-11 18:41:32 | INFO     | __main__:main:163 | Program started.
+2026-06-11 18:41:34 | DEBUG    | __main__:main:192 | Menu choice: 1
+2026-06-11 18:41:34 | INFO     | __main__:action_view:79 | User selected: View all students.
+2026-06-11 18:41:34 | INFO     | services.student_service:list_students:59 | Listing students (enrolled_only=False).
+2026-06-11 18:41:34 | DEBUG    | services.student_service:_load_data:35 | Loaded 6 student(s) from C:\Users\Dell\Desktop\maintenance\data\students.json.
+2026-06-11 18:41:34 | DEBUG    | services.student_service:list_students:63 | Returning 6 student(s).
+2026-06-11 21:09:04 | DEBUG    | utils.logger_setup:setup_logging:59 | Loguru logging initialised.
+2026-06-11 21:09:04 | INFO     | __main__:main:163 | Program started.
+2026-06-11 21:09:31 | DEBUG    | utils.logger_setup:setup_logging:59 | Loguru logging initialised.
+2026-06-11 21:09:31 | INFO     | __main__:main:163 | Program started.
+2026-06-11 21:09:37 | DEBUG    | __main__:main:192 | Menu choice: 1
+2026-06-11 21:09:37 | INFO     | __main__:action_view:79 | User selected: View all students.
+2026-06-11 21:09:37 | INFO     | services.student_service:list_students:59 | Listing students (enrolled_only=False).
+2026-06-11 21:09:37 | DEBUG    | services.student_service:_load_data:35 | Loaded 6 student(s) from C:\Users\Dell\Desktop\maintenance\data\students.json.
+2026-06-11 21:09:37 | DEBUG    | services.student_service:list_students:63 | Returning 6 student(s).
+2026-06-11 21:09:41 | INFO     | __main__:main:185 | User exited the program.
+2026-06-12 10:55:34 | DEBUG    | utils.logger_setup:setup_logging:59 | Loguru logging initialised.
+2026-06-12 10:55:34 | INFO     | __main__:main:163 | Program started.
+2026-06-12 10:55:39 | WARNING  | __main__:main:181 | Invalid menu input: ''
+2026-06-12 10:55:43 | DEBUG    | __main__:main:192 | Menu choice: 1
+2026-06-12 10:55:43 | INFO     | __main__:action_view:79 | User selected: View all students.
+2026-06-12 10:55:43 | INFO     | services.student_service:list_students:59 | Listing students (enrolled_only=False).
+2026-06-12 10:55:43 | DEBUG    | services.student_service:_load_data:35 | Loaded 6 student(s) from C:\Users\Dell\Desktop\maintenance\data\students.json.
+2026-06-12 10:55:43 | DEBUG    | services.student_service:list_students:63 | Returning 6 student(s).
+2026-06-12 11:08:22 | DEBUG    | __main__:main:192 | Menu choice: 6
+2026-06-12 11:08:22 | INFO     | services.report_service:print_full_report:81 | Generating full report.
+2026-06-12 11:08:22 | INFO     | services.student_service:list_students:59 | Listing students (enrolled_only=False).
+2026-06-12 11:08:22 | DEBUG    | services.student_service:_load_data:35 | Loaded 6 student(s) from C:\Users\Dell\Desktop\maintenance\data\students.json.
+2026-06-12 11:08:22 | DEBUG    | services.student_service:list_students:63 | Returning 6 student(s).
+2026-06-12 11:08:22 | INFO     | services.report_service:compute_stats:23 | Computing stats for 6 student(s).
+2026-06-12 11:08:22 | DEBUG    | services.report_service:compute_stats:41 | Stats: {'count': 6, 'average': 3.18, 'highest': 3.95, 'lowest': 1.8}
+2026-06-12 11:08:22 | INFO     | services.report_service:classify_students:50 | Classifying students by academic standing.
+2026-06-12 11:08:22 | DEBUG    | services.report_service:classify_students:60 |   STU001 → Distinction
+2026-06-12 11:08:22 | DEBUG    | services.report_service:classify_students:60 |   STU002 → Merit
+2026-06-12 11:08:22 | DEBUG    | services.report_service:classify_students:60 |   STU003 → Pass
+2026-06-12 11:08:22 | DEBUG    | services.report_service:classify_students:60 |   STU004 → At Risk
+2026-06-12 11:08:22 | DEBUG    | services.report_service:classify_students:60 |   STU005 → Distinction
+2026-06-12 11:08:22 | DEBUG    | services.report_service:classify_students:60 |   STU0002 → Distinction
+2026-06-12 11:08:22 | DEBUG    | services.student_service:sort_by_grade:183 | Sorting 6 student(s) by grade (reverse=True).
+2026-06-12 11:08:22 | INFO     | services.report_service:major_breakdown:66 | Computing major breakdown.
+2026-06-12 11:08:22 | DEBUG    | services.report_service:major_breakdown:71 | Major breakdown: {'Computer Science': 2, 'Electrical Engineering': 1, 'Mathematics': 1, 'Physics': 1, 'Swe': 1}
+2026-06-12 11:08:22 | SUCCESS  | services.report_service:print_full_report:122 | Full report printed.
+2026-06-12 11:16:06 | INFO     | __main__:main:185 | User exited the program.
+2026-06-12 11:16:19 | DEBUG    | utils.logger_setup:setup_logging:59 | Loguru logging initialised.
+2026-06-12 11:16:19 | INFO     | __main__:main:163 | Program started.
+2026-06-12 11:16:24 | DEBUG    | __main__:main:192 | Menu choice: 1
+2026-06-12 11:16:24 | INFO     | __main__:action_view:79 | User selected: View all students.
+2026-06-12 11:16:24 | INFO     | services.student_service:list_students:59 | Listing students (enrolled_only=False).
+2026-06-12 11:16:24 | DEBUG    | services.student_service:_load_data:35 | Loaded 6 student(s) from C:\Users\Dell\Desktop\maintenance\data\students.json.
+2026-06-12 11:16:24 | DEBUG    | services.student_service:list_students:63 | Returning 6 student(s).
+2026-06-12 11:16:29 | INFO     | __main__:main:185 | User exited the program.
+2026-06-12 11:16:47 | DEBUG    | utils.logger_setup:setup_logging:59 | Loguru logging initialised.
+2026-06-12 11:16:47 | INFO     | __main__:main:163 | Program started.
+2026-06-12 11:16:50 | DEBUG    | __main__:main:192 | Menu choice: 1
+2026-06-12 11:16:50 | INFO     | __main__:action_view:79 | User selected: View all students.
+2026-06-12 11:16:50 | INFO     | services.student_service:list_students:59 | Listing students (enrolled_only=False).
+2026-06-12 11:16:50 | DEBUG    | services.student_service:_load_data:35 | Loaded 6 student(s) from C:\Users\Dell\Desktop\maintenance\data\students.json.
+2026-06-12 11:16:50 | DEBUG    | services.student_service:list_students:63 | Returning 6 student(s).
+2026-06-12 11:16:51 | INFO     | __main__:main:185 | User exited the program.
+2026-06-12 11:24:45 | DEBUG    | utils.logger_setup:setup_logging:59 | Loguru logging initialised.
+2026-06-12 11:24:45 | INFO     | __main__:main:163 | Program started.
+2026-06-12 11:24:50 | DEBUG    | __main__:main:192 | Menu choice: 1
+2026-06-12 11:24:50 | INFO     | __main__:action_view:79 | User selected: View all students.
+2026-06-12 11:24:50 | INFO     | services.student_service:list_students:59 | Listing students (enrolled_only=False).
+2026-06-12 11:24:50 | DEBUG    | services.student_service:_load_data:35 | Loaded 6 student(s) from C:\Users\Dell\Desktop\maintenance\data\students.json.
+2026-06-12 11:24:50 | DEBUG    | services.student_service:list_students:63 | Returning 6 student(s).
+2026-06-12 11:24:53 | INFO     | __main__:main:185 | User exited the program.
+2026-06-12 11:29:08 | DEBUG    | utils.logger_setup:setup_logging:59 | Loguru logging initialised.
+2026-06-12 11:29:08 | INFO     | __main__:main:163 | Program started.
+2026-06-12 11:29:10 | DEBUG    | __main__:main:192 | Menu choice: 1
+2026-06-12 11:29:10 | INFO     | __main__:action_view:79 | User selected: View all students.
+2026-06-12 11:29:10 | INFO     | services.student_service:list_students:59 | Listing students (enrolled_only=False).
+2026-06-12 11:29:10 | DEBUG    | services.student_service:_load_data:35 | Loaded 6 student(s) from C:\Users\Dell\Desktop\maintenance\data\students.json.
+2026-06-12 11:29:10 | DEBUG    | services.student_service:list_students:63 | Returning 6 student(s).
+2026-06-12 11:29:11 | INFO     | __main__:main:185 | User exited the program.
+2026-07-10 00:39:20 | DEBUG    | utils.logger_setup:setup_logging:59 | Loguru logging initialised.
+2026-07-10 00:39:20 | INFO     | __main__:main:163 | Program started.
+2026-07-10 00:39:22 | DEBUG    | __main__:main:192 | Menu choice: 6
+2026-07-10 00:39:22 | INFO     | services.report_service:print_full_report:81 | Generating full report.
+2026-07-10 00:39:22 | INFO     | services.student_service:list_students:59 | Listing students (enrolled_only=False).
+2026-07-10 00:39:22 | DEBUG    | services.student_service:_load_data:35 | Loaded 6 student(s) from C:\Users\Dell\Desktop\maintenance\data\students.json.
+2026-07-10 00:39:22 | DEBUG    | services.student_service:list_students:63 | Returning 6 student(s).
+2026-07-10 00:39:22 | INFO     | services.report_service:compute_stats:23 | Computing stats for 6 student(s).
+2026-07-10 00:39:22 | DEBUG    | services.report_service:compute_stats:41 | Stats: {'count': 6, 'average': 3.18, 'highest': 3.95, 'lowest': 1.8}
+2026-07-10 00:39:22 | INFO     | services.report_service:classify_students:50 | Classifying students by academic standing.
+2026-07-10 00:39:22 | DEBUG    | services.report_service:classify_students:60 |   STU001 → Distinction
+2026-07-10 00:39:22 | DEBUG    | services.report_service:classify_students:60 |   STU002 → Merit
+2026-07-10 00:39:22 | DEBUG    | services.report_service:classify_students:60 |   STU003 → Pass
+2026-07-10 00:39:22 | DEBUG    | services.report_service:classify_students:60 |   STU004 → At Risk
+2026-07-10 00:39:22 | DEBUG    | services.report_service:classify_students:60 |   STU005 → Distinction
+2026-07-10 00:39:22 | DEBUG    | services.report_service:classify_students:60 |   STU0002 → Distinction
+2026-07-10 00:39:22 | DEBUG    | services.student_service:sort_by_grade:183 | Sorting 6 student(s) by grade (reverse=True).
+2026-07-10 00:39:22 | INFO     | services.report_service:major_breakdown:66 | Computing major breakdown.
+2026-07-10 00:39:22 | DEBUG    | services.report_service:major_breakdown:71 | Major breakdown: {'Computer Science': 2, 'Electrical Engineering': 1, 'Mathematics': 1, 'Physics': 1, 'Swe': 1}
+2026-07-10 00:39:22 | SUCCESS  | services.report_service:print_full_report:122 | Full report printed.
+2026-08-16 23:25:08 | DEBUG    | utils.logger_setup:setup_logging:59 | Loguru logging initialised.
+2026-08-16 23:25:08 | INFO     | __main__:main:170 | Program started.
+2026-08-16 23:25:09 | DEBUG    | __main__:main:200 | Menu choice: 8
+2026-08-16 23:25:09 | INFO     | __main__:action_export_csv:162 | User selected: Export to CSV.
+2026-08-16 23:25:09 | DEBUG    | services.student_service:_load_data:36 | Loaded 6 student(s) from C:\Users\Dell\Desktop\maintenance\adaptive\data\students.json.
+2026-08-16 23:25:09 | SUCCESS  | services.student_service:export_to_csv:66 | Exported 6 student(s) to students_export.csv.
+2026-08-16 23:25:12 | INFO     | __main__:main:193 | User exited the program.
+2026-08-16 23:32:22 | DEBUG    | utils.logger_setup:setup_logging:59 | Loguru logging initialised.
+2026-08-16 23:32:22 | INFO     | __main__:main:170 | Program started.
+2026-08-16 23:32:34 | DEBUG    | __main__:main:200 | Menu choice: 6
+2026-08-16 23:32:34 | INFO     | services.report_service:print_full_report:81 | Generating full report.
+2026-08-16 23:32:34 | INFO     | services.student_service:list_students:77 | Listing students (enrolled_only=False).
+2026-08-16 23:32:34 | DEBUG    | services.student_service:_load_data:36 | Loaded 6 student(s) from C:\Users\Dell\Desktop\maintenance\perfective\data\students.json.
+2026-08-16 23:32:34 | DEBUG    | services.student_service:list_students:81 | Returning 6 student(s).
+2026-08-16 23:32:34 | INFO     | services.report_service:compute_stats:23 | Computing stats for 6 student(s).
+2026-08-16 23:32:34 | DEBUG    | services.report_service:compute_stats:41 | Stats: {'count': 6, 'average': 3.18, 'highest': 3.95, 'lowest': 1.8}
+2026-08-16 23:32:34 | INFO     | services.report_service:classify_students:50 | Classifying students by academic standing.
+2026-08-16 23:32:34 | DEBUG    | services.report_service:classify_students:60 |   STU001 → Distinction
+2026-08-16 23:32:34 | DEBUG    | services.report_service:classify_students:60 |   STU002 → Merit
+2026-08-16 23:32:34 | DEBUG    | services.report_service:classify_students:60 |   STU003 → Pass
+2026-08-16 23:32:34 | DEBUG    | services.report_service:classify_students:60 |   STU004 → At Risk
+2026-08-16 23:32:34 | DEBUG    | services.report_service:classify_students:60 |   STU005 → Distinction
+2026-08-16 23:32:34 | DEBUG    | services.report_service:classify_students:60 |   STU0002 → Distinction
+2026-08-16 23:32:34 | DEBUG    | services.student_service:sort_by_grade:201 | Sorting 6 student(s) by grade (reverse=True).
+2026-08-16 23:32:34 | INFO     | services.report_service:major_breakdown:66 | Computing major breakdown.
+2026-08-16 23:32:34 | DEBUG    | services.report_service:major_breakdown:71 | Major breakdown: {'Computer Science': 2, 'Electrical Engineering': 1, 'Mathematics': 1, 'Physics': 1, 'Swe': 1}
+2026-08-16 23:32:34 | SUCCESS  | services.report_service:print_full_report:122 | Full report printed.
+2026-08-16 23:32:47 | INFO     | __main__:main:193 | User exited the program.
