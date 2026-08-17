@@ -195,3 +195,6 @@
 2026-07-10 00:39:22 | INFO     | services.report_service:major_breakdown:66 | Computing major breakdown.
 2026-07-10 00:39:22 | DEBUG    | services.report_service:major_breakdown:71 | Major breakdown: {'Computer Science': 2, 'Electrical Engineering': 1, 'Mathematics': 1, 'Physics': 1, 'Swe': 1}
 2026-07-10 00:39:22 | SUCCESS  | services.report_service:print_full_report:122 | Full report printed.
+2026-08-17 23:32:57 | DEBUG    | utils.logger_setup:setup_logging:59 | Loguru logging initialised.
+2026-08-17 23:32:57 | INFO     | __main__:main:163 | Program started.
+2026-08-17 23:32:59 | INFO     | __main__:main:185 | User exited the program.

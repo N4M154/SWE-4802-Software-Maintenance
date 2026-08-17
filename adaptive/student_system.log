@@ -202,3 +202,13 @@
 2026-08-16 23:25:09 | DEBUG    | services.student_service:_load_data:36 | Loaded 6 student(s) from C:\Users\Dell\Desktop\maintenance\adaptive\data\students.json.
 2026-08-16 23:25:09 | SUCCESS  | services.student_service:export_to_csv:66 | Exported 6 student(s) to students_export.csv.
 2026-08-16 23:25:12 | INFO     | __main__:main:193 | User exited the program.
+2026-08-17 23:33:24 | DEBUG    | utils.logger_setup:setup_logging:59 | Loguru logging initialised.
+2026-08-17 23:33:24 | INFO     | __main__:main:170 | Program started.
+2026-08-17 23:33:25 | INFO     | __main__:main:193 | User exited the program.
+2026-08-17 23:33:56 | DEBUG    | utils.logger_setup:setup_logging:59 | Loguru logging initialised.
+2026-08-17 23:33:56 | INFO     | __main__:main:170 | Program started.
+2026-08-17 23:33:58 | DEBUG    | __main__:main:200 | Menu choice: 8
+2026-08-17 23:33:58 | INFO     | __main__:action_export_csv:162 | User selected: Export to CSV.
+2026-08-17 23:33:58 | DEBUG    | services.student_service:_load_data:36 | Loaded 6 student(s) from C:\Users\Dell\Desktop\SWE-4802-Software-Maintenance\adaptive\data\students.json.
+2026-08-17 23:33:58 | SUCCESS  | services.student_service:export_to_csv:66 | Exported 6 student(s) to students_export.csv.
+2026-08-17 23:34:00 | INFO     | __main__:main:193 | User exited the program.
