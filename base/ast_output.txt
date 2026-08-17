@@ -1,0 +1,467 @@
+Module(
+  body=[
+    Expr(
+      value=Constant(value='\nutils/validators.py\n===================\nInput validation helpers.\nAll functions raise ValueError on bad input so callers can handle cleanly.\n')),
+    Import(
+      names=[
+        alias(name='re')]),
+    ImportFrom(
+      module='utils.logger_setup',
+      names=[
+        alias(name='get_logger')],
+      level=0),
+    Assign(
+      targets=[
+        Name(id='logger', ctx=Store())],
+      value=Call(
+        func=Name(id='get_logger', ctx=Load()),
+        args=[
+          Name(id='__name__', ctx=Load())],
+        keywords=[])),
+    FunctionDef(
+      name='validate_name',
+      args=arguments(
+        posonlyargs=[],
+        args=[
+          arg(
+            arg='name',
+            annotation=Name(id='str', ctx=Load()))],
+        kwonlyargs=[],
+        kw_defaults=[],
+        defaults=[]),
+      body=[
+        Expr(
+          value=Constant(value='\n    Validate and normalise a student name.\n    - Must be 2–60 characters\n    - Only letters, spaces, hyphens, apostrophes\n    Returns the title-cased name.\n    ')),
+        Assign(
+          targets=[
+            Name(id='name', ctx=Store())],
+          value=Call(
+            func=Attribute(
+              value=Name(id='name', ctx=Load()),
+              attr='strip',
+              ctx=Load()),
+            args=[],
+            keywords=[])),
+        If(
+          test=BoolOp(
+            op=Or(),
+            values=[
+              Compare(
+                left=Call(
+                  func=Name(id='len', ctx=Load()),
+                  args=[
+                    Name(id='name', ctx=Load())],
+                  keywords=[]),
+                ops=[
+                  Lt()],
+                comparators=[
+                  Constant(value=2)]),
+              Compare(
+                left=Call(
+                  func=Name(id='len', ctx=Load()),
+                  args=[
+                    Name(id='name', ctx=Load())],
+                  keywords=[]),
+                ops=[
+                  Gt()],
+                comparators=[
+                  Constant(value=60)])]),
+          body=[
+            Expr(
+              value=Call(
+                func=Attribute(
+                  value=Name(id='logger', ctx=Load()),
+                  attr='warning',
+                  ctx=Load()),
+                args=[
+                  JoinedStr(
+                    values=[
+                      Constant(value="Name length out of range: '"),
+                      FormattedValue(
+                        value=Name(id='name', ctx=Load()),
+                        conversion=-1),
+                      Constant(value="'")])],
+                keywords=[])),
+            Raise(
+              exc=Call(
+                func=Name(id='ValueError', ctx=Load()),
+                args=[
+                  Constant(value='Name must be between 2 and 60 characters.')],
+                keywords=[]))],
+          orelse=[]),
+        If(
+          test=UnaryOp(
+            op=Not(),
+            operand=Call(
+              func=Attribute(
+                value=Name(id='re', ctx=Load()),
+                attr='fullmatch',
+                ctx=Load()),
+              args=[
+                Constant(value="[A-Za-z\\s\\-']+"),
+                Name(id='name', ctx=Load())],
+              keywords=[])),
+          body=[
+            Expr(
+              value=Call(
+                func=Attribute(
+                  value=Name(id='logger', ctx=Load()),
+                  attr='warning',
+                  ctx=Load()),
+                args=[
+                  JoinedStr(
+                    values=[
+                      Constant(value="Name contains invalid characters: '"),
+                      FormattedValue(
+                        value=Name(id='name', ctx=Load()),
+                        conversion=-1),
+                      Constant(value="'")])],
+                keywords=[])),
+            Raise(
+              exc=Call(
+                func=Name(id='ValueError', ctx=Load()),
+                args=[
+                  Constant(value='Name may only contain letters, spaces, hyphens, or apostrophes.')],
+                keywords=[]))],
+          orelse=[]),
+        Return(
+          value=Call(
+            func=Attribute(
+              value=Name(id='name', ctx=Load()),
+              attr='title',
+              ctx=Load()),
+            args=[],
+            keywords=[]))],
+      decorator_list=[],
+      returns=Name(id='str', ctx=Load())),
+    FunctionDef(
+      name='validate_student_id',
+      args=arguments(
+        posonlyargs=[],
+        args=[
+          arg(
+            arg='student_id',
+            annotation=Name(id='str', ctx=Load()))],
+        kwonlyargs=[],
+        kw_defaults=[],
+        defaults=[]),
+      body=[
+        Expr(
+          value=Constant(value='\n    Validate a student ID.\n    Expected format: letters + digits, e.g. STU001 or S12345 (3–10 chars).\n    ')),
+        Assign(
+          targets=[
+            Name(id='student_id', ctx=Store())],
+          value=Call(
+            func=Attribute(
+              value=Call(
+                func=Attribute(
+                  value=Name(id='student_id', ctx=Load()),
+                  attr='strip',
+                  ctx=Load()),
+                args=[],
+                keywords=[]),
+              attr='upper',
+              ctx=Load()),
+            args=[],
+            keywords=[])),
+        If(
+          test=UnaryOp(
+            op=Not(),
+            operand=Call(
+              func=Attribute(
+                value=Name(id='re', ctx=Load()),
+                attr='fullmatch',
+                ctx=Load()),
+              args=[
+                Constant(value='[A-Z]{1,4}\\d{2,8}'),
+                Name(id='student_id', ctx=Load())],
+              keywords=[])),
+          body=[
+            Expr(
+              value=Call(
+                func=Attribute(
+                  value=Name(id='logger', ctx=Load()),
+                  attr='warning',
+                  ctx=Load()),
+                args=[
+                  JoinedStr(
+                    values=[
+                      Constant(value="Invalid student ID format: '"),
+                      FormattedValue(
+                        value=Name(id='student_id', ctx=Load()),
+                        conversion=-1),
+                      Constant(value="'")])],
+                keywords=[])),
+            Raise(
+              exc=Call(
+                func=Name(id='ValueError', ctx=Load()),
+                args=[
+                  Constant(value='Student ID must start with 1-4 letters followed by 2-8 digits (e.g. STU001).')],
+                keywords=[]))],
+          orelse=[]),
+        Return(
+          value=Name(id='student_id', ctx=Load()))],
+      decorator_list=[],
+      returns=Name(id='str', ctx=Load())),
+    FunctionDef(
+      name='validate_grade',
+      args=arguments(
+        posonlyargs=[],
+        args=[
+          arg(
+            arg='grade_str',
+            annotation=Name(id='str', ctx=Load()))],
+        kwonlyargs=[],
+        kw_defaults=[],
+        defaults=[]),
+      body=[
+        Expr(
+          value=Constant(value='\n    Validate a GPA value.\n    Must be a number in the range 0.0 – 4.0.\n    ')),
+        Try(
+          body=[
+            Assign(
+              targets=[
+                Name(id='grade', ctx=Store())],
+              value=Call(
+                func=Name(id='float', ctx=Load()),
+                args=[
+                  Call(
+                    func=Attribute(
+                      value=Name(id='grade_str', ctx=Load()),
+                      attr='strip',
+                      ctx=Load()),
+                    args=[],
+                    keywords=[])],
+                keywords=[]))],
+          handlers=[
+            ExceptHandler(
+              type=Name(id='ValueError', ctx=Load()),
+              body=[
+                Expr(
+                  value=Call(
+                    func=Attribute(
+                      value=Name(id='logger', ctx=Load()),
+                      attr='warning',
+                      ctx=Load()),
+                    args=[
+                      JoinedStr(
+                        values=[
+                          Constant(value="Non-numeric grade entered: '"),
+                          FormattedValue(
+                            value=Name(id='grade_str', ctx=Load()),
+                            conversion=-1),
+                          Constant(value="'")])],
+                    keywords=[])),
+                Raise(
+                  exc=Call(
+                    func=Name(id='ValueError', ctx=Load()),
+                    args=[
+                      Constant(value='Grade must be a numeric value.')],
+                    keywords=[]))])],
+          orelse=[],
+          finalbody=[]),
+        If(
+          test=UnaryOp(
+            op=Not(),
+            operand=Compare(
+              left=Constant(value=0.0),
+              ops=[
+                LtE(),
+                LtE()],
+              comparators=[
+                Name(id='grade', ctx=Load()),
+                Constant(value=4.0)])),
+          body=[
+            Expr(
+              value=Call(
+                func=Attribute(
+                  value=Name(id='logger', ctx=Load()),
+                  attr='warning',
+                  ctx=Load()),
+                args=[
+                  JoinedStr(
+                    values=[
+                      Constant(value='Grade out of range: '),
+                      FormattedValue(
+                        value=Name(id='grade', ctx=Load()),
+                        conversion=-1)])],
+                keywords=[])),
+            Raise(
+              exc=Call(
+                func=Name(id='ValueError', ctx=Load()),
+                args=[
+                  Constant(value='Grade (GPA) must be between 0.0 and 4.0.')],
+                keywords=[]))],
+          orelse=[]),
+        Return(
+          value=Call(
+            func=Name(id='round', ctx=Load()),
+            args=[
+              Name(id='grade', ctx=Load()),
+              Constant(value=2)],
+            keywords=[]))],
+      decorator_list=[],
+      returns=Name(id='float', ctx=Load())),
+    FunctionDef(
+      name='validate_major',
+      args=arguments(
+        posonlyargs=[],
+        args=[
+          arg(
+            arg='major',
+            annotation=Name(id='str', ctx=Load()))],
+        kwonlyargs=[],
+        kw_defaults=[],
+        defaults=[]),
+      body=[
+        Expr(
+          value=Constant(value='\n    Validate a major/field-of-study string.\n    Must be 2–80 printable characters.\n    ')),
+        Assign(
+          targets=[
+            Name(id='major', ctx=Store())],
+          value=Call(
+            func=Attribute(
+              value=Name(id='major', ctx=Load()),
+              attr='strip',
+              ctx=Load()),
+            args=[],
+            keywords=[])),
+        If(
+          test=BoolOp(
+            op=Or(),
+            values=[
+              Compare(
+                left=Call(
+                  func=Name(id='len', ctx=Load()),
+                  args=[
+                    Name(id='major', ctx=Load())],
+                  keywords=[]),
+                ops=[
+                  Lt()],
+                comparators=[
+                  Constant(value=2)]),
+              Compare(
+                left=Call(
+                  func=Name(id='len', ctx=Load()),
+                  args=[
+                    Name(id='major', ctx=Load())],
+                  keywords=[]),
+                ops=[
+                  Gt()],
+                comparators=[
+                  Constant(value=80)])]),
+          body=[
+            Expr(
+              value=Call(
+                func=Attribute(
+                  value=Name(id='logger', ctx=Load()),
+                  attr='warning',
+                  ctx=Load()),
+                args=[
+                  JoinedStr(
+                    values=[
+                      Constant(value="Major length out of range: '"),
+                      FormattedValue(
+                        value=Name(id='major', ctx=Load()),
+                        conversion=-1),
+                      Constant(value="'")])],
+                keywords=[])),
+            Raise(
+              exc=Call(
+                func=Name(id='ValueError', ctx=Load()),
+                args=[
+                  Constant(value='Major must be between 2 and 80 characters.')],
+                keywords=[]))],
+          orelse=[]),
+        Return(
+          value=Call(
+            func=Attribute(
+              value=Name(id='major', ctx=Load()),
+              attr='title',
+              ctx=Load()),
+            args=[],
+            keywords=[]))],
+      decorator_list=[],
+      returns=Name(id='str', ctx=Load())),
+    FunctionDef(
+      name='validate_menu_choice',
+      args=arguments(
+        posonlyargs=[],
+        args=[
+          arg(
+            arg='raw',
+            annotation=Name(id='str', ctx=Load())),
+          arg(
+            arg='low',
+            annotation=Name(id='int', ctx=Load())),
+          arg(
+            arg='high',
+            annotation=Name(id='int', ctx=Load()))],
+        kwonlyargs=[],
+        kw_defaults=[],
+        defaults=[]),
+      body=[
+        Expr(
+          value=Constant(value='\n    Parse and validate a menu option integer in [low, high].\n    ')),
+        Try(
+          body=[
+            Assign(
+              targets=[
+                Name(id='choice', ctx=Store())],
+              value=Call(
+                func=Name(id='int', ctx=Load()),
+                args=[
+                  Call(
+                    func=Attribute(
+                      value=Name(id='raw', ctx=Load()),
+                      attr='strip',
+                      ctx=Load()),
+                    args=[],
+                    keywords=[])],
+                keywords=[]))],
+          handlers=[
+            ExceptHandler(
+              type=Name(id='ValueError', ctx=Load()),
+              body=[
+                Raise(
+                  exc=Call(
+                    func=Name(id='ValueError', ctx=Load()),
+                    args=[
+                      Constant(value='Please enter a whole number.')],
+                    keywords=[]))])],
+          orelse=[],
+          finalbody=[]),
+        If(
+          test=UnaryOp(
+            op=Not(),
+            operand=Compare(
+              left=Name(id='low', ctx=Load()),
+              ops=[
+                LtE(),
+                LtE()],
+              comparators=[
+                Name(id='choice', ctx=Load()),
+                Name(id='high', ctx=Load())])),
+          body=[
+            Raise(
+              exc=Call(
+                func=Name(id='ValueError', ctx=Load()),
+                args=[
+                  JoinedStr(
+                    values=[
+                      Constant(value='Please enter a number between '),
+                      FormattedValue(
+                        value=Name(id='low', ctx=Load()),
+                        conversion=-1),
+                      Constant(value=' and '),
+                      FormattedValue(
+                        value=Name(id='high', ctx=Load()),
+                        conversion=-1),
+                      Constant(value='.')])],
+                keywords=[]))],
+          orelse=[]),
+        Return(
+          value=Name(id='choice', ctx=Load()))],
+      decorator_list=[],
+      returns=Name(id='int', ctx=Load()))],
+  type_ignores=[])

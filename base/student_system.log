@@ -195,3 +195,31 @@
 2026-07-10 00:39:22 | INFO     | services.report_service:major_breakdown:66 | Computing major breakdown.
 2026-07-10 00:39:22 | DEBUG    | services.report_service:major_breakdown:71 | Major breakdown: {'Computer Science': 2, 'Electrical Engineering': 1, 'Mathematics': 1, 'Physics': 1, 'Swe': 1}
 2026-07-10 00:39:22 | SUCCESS  | services.report_service:print_full_report:122 | Full report printed.
+2026-08-17 20:14:37 | DEBUG    | utils.logger_setup:setup_logging:59 | Loguru logging initialised.
+2026-08-17 20:14:37 | INFO     | __main__:main:163 | Program started.
+2026-08-17 20:14:47 | DEBUG    | __main__:main:192 | Menu choice: 2
+2026-08-17 20:14:47 | INFO     | __main__:action_add:87 | User selected: Add new student.
+2026-08-17 20:14:59 | INFO     | services.student_service:add_student:73 | Attempting to add student: name='raisa', id='STU012'.
+2026-08-17 20:14:59 | DEBUG    | services.student_service:_load_data:35 | Loaded 6 student(s) from C:\Users\Dell\Desktop\SWE-4802-Software-Maintenance\base\data\students.json.
+2026-08-17 20:14:59 | DEBUG    | services.student_service:_save_data:48 | Saved 7 student(s) to C:\Users\Dell\Desktop\SWE-4802-Software-Maintenance\base\data\students.json.
+2026-08-17 20:14:59 | SUCCESS  | services.student_service:add_student:93 | Added: [STU012] Raisa | Major: Swe | GPA: 3.80 | Status: Active | Standing: Distinction
+2026-08-17 20:15:02 | DEBUG    | __main__:main:192 | Menu choice: 6
+2026-08-17 20:15:02 | INFO     | services.report_service:print_full_report:81 | Generating full report.
+2026-08-17 20:15:02 | INFO     | services.student_service:list_students:59 | Listing students (enrolled_only=False).
+2026-08-17 20:15:02 | DEBUG    | services.student_service:_load_data:35 | Loaded 7 student(s) from C:\Users\Dell\Desktop\SWE-4802-Software-Maintenance\base\data\students.json.
+2026-08-17 20:15:02 | DEBUG    | services.student_service:list_students:63 | Returning 7 student(s).
+2026-08-17 20:15:02 | INFO     | services.report_service:compute_stats:23 | Computing stats for 7 student(s).
+2026-08-17 20:15:02 | DEBUG    | services.report_service:compute_stats:41 | Stats: {'count': 7, 'average': 3.26, 'highest': 3.95, 'lowest': 1.8}
+2026-08-17 20:15:02 | INFO     | services.report_service:classify_students:50 | Classifying students by academic standing.
+2026-08-17 20:15:02 | DEBUG    | services.report_service:classify_students:60 |   STU001 → Distinction
+2026-08-17 20:15:02 | DEBUG    | services.report_service:classify_students:60 |   STU002 → Merit
+2026-08-17 20:15:02 | DEBUG    | services.report_service:classify_students:60 |   STU003 → Pass
+2026-08-17 20:15:02 | DEBUG    | services.report_service:classify_students:60 |   STU004 → At Risk
+2026-08-17 20:15:02 | DEBUG    | services.report_service:classify_students:60 |   STU005 → Distinction
+2026-08-17 20:15:02 | DEBUG    | services.report_service:classify_students:60 |   STU0002 → Distinction
+2026-08-17 20:15:02 | DEBUG    | services.report_service:classify_students:60 |   STU012 → Distinction
+2026-08-17 20:15:02 | DEBUG    | services.student_service:sort_by_grade:183 | Sorting 7 student(s) by grade (reverse=True).
+2026-08-17 20:15:02 | INFO     | services.report_service:major_breakdown:66 | Computing major breakdown.
+2026-08-17 20:15:02 | DEBUG    | services.report_service:major_breakdown:71 | Major breakdown: {'Computer Science': 2, 'Swe': 2, 'Electrical Engineering': 1, 'Mathematics': 1, 'Physics': 1}
+2026-08-17 20:15:02 | SUCCESS  | services.report_service:print_full_report:122 | Full report printed.
+2026-08-17 20:15:08 | INFO     | __main__:main:185 | User exited the program.

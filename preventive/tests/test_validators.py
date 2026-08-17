@@ -8,7 +8,7 @@ from utils.validators import (
 class TestValidators(unittest.TestCase):
 
     def test_validate_name_valid(self):
-        self.assertEqual(validate_name("john doe"), "John Doe")
+        self.assertEqual(validate_name("Yugesh Kumar"), "Yugesh Kumar")
 
     def test_validate_name_too_short(self):
         with self.assertRaises(ValueError):

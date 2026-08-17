@@ -355,3 +355,44 @@ New var:....... students = [Student(name='Yugesh Kumar', student_id='STU001...d=
 00:39:22.921218 return      64     return students
 Return value:.. [Student(name='Yugesh Kumar', student_id='STU001...d=True, created_at='2026-06-11T18:39:52.606491')]
 Elapsed time: 00:00:00.034071
+Source path:... C:\Users\Dell\Desktop\SWE-4802-Software-Maintenance\base\services\student_service.py
+Starting var:.. name = 'raisa'
+Starting var:.. student_id = 'STU012'
+Starting var:.. grade = '3.8'
+Starting var:.. major = 'SWE'
+20:14:59.659511 call        68 def add_student(name: str, student_id: str, grade: str, major: str) -> Student:
+20:14:59.665879 line        73     logger.info(f"Attempting to add student: name='{name}', id='{student_id}'.")
+20:14:59.668391 line        76     name       = validate_name(name)
+Modified var:.. name = 'Raisa'
+20:14:59.670405 line        77     student_id = validate_student_id(student_id)
+20:14:59.673460 line        78     grade_val  = validate_grade(grade)
+New var:....... grade_val = 3.8
+20:14:59.673460 line        79     major      = validate_major(major)
+Modified var:.. major = 'Swe'
+20:14:59.675700 line        81     students = _load_data()
+New var:....... students = [Student(name='Yugesh Kumar', student_id='STU001...d=True, created_at='2026-06-11T18:39:52.606491')]
+20:14:59.679736 line        84     existing_ids = [s.student_id for s in students]
+New var:....... existing_ids = ['STU001', 'STU002', 'STU003', 'STU004', 'STU005', 'STU0002']
+20:14:59.716911 line        85     if student_id in existing_ids:
+20:14:59.717912 line        89     new_student = Student(name=name, student_id=student_id, grade=grade_val, major=major)
+New var:....... new_student = Student(name='Raisa', student_id='STU012', grade...ed=True, created_at='2026-08-17T20:14:59.717912')
+20:14:59.717912 line        90     students.append(new_student)
+Modified var:.. students = [Student(name='Yugesh Kumar', student_id='STU001...d=True, created_at='2026-08-17T20:14:59.717912')]
+20:14:59.718932 line        91     _save_data(students)
+20:14:59.722457 line        93     logger.success(f"Added: {new_student}")
+20:14:59.724472 line        94     return new_student
+20:14:59.726471 return      94     return new_student
+Return value:.. Student(name='Raisa', student_id='STU012', grade...ed=True, created_at='2026-08-17T20:14:59.717912')
+Elapsed time: 00:00:00.068970
+Source path:... C:\Users\Dell\Desktop\SWE-4802-Software-Maintenance\base\services\student_service.py
+Starting var:.. enrolled_only = False
+20:15:02.811793 call        54 def list_students(enrolled_only: bool = False) -> List[Student]:
+20:15:02.813312 line        59     logger.info(f"Listing students (enrolled_only={enrolled_only}).")
+20:15:02.814920 line        60     students = _load_data()
+New var:....... students = [Student(name='Yugesh Kumar', student_id='STU001...d=True, created_at='2026-08-17T20:14:59.717912')]
+20:15:02.817508 line        61     if enrolled_only:
+20:15:02.819055 line        63     logger.debug(f"Returning {len(students)} student(s).")
+20:15:02.822993 line        64     return students
+20:15:02.824497 return      64     return students
+Return value:.. [Student(name='Yugesh Kumar', student_id='STU001...d=True, created_at='2026-08-17T20:14:59.717912')]
+Elapsed time: 00:00:00.014263
