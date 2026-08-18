@@ -1,0 +1,23 @@
+ 21           0 RESUME                   0
+
+ 24           2 LOAD_FAST                0 (self)
+              4 LOAD_ATTR                0 (name)
+
+ 25          14 LOAD_FAST                0 (self)
+             16 LOAD_ATTR                1 (student_id)
+
+ 26          26 LOAD_FAST                0 (self)
+             28 LOAD_ATTR                2 (grade)
+
+ 27          38 LOAD_FAST                0 (self)
+             40 LOAD_ATTR                3 (major)
+
+ 28          50 LOAD_FAST                0 (self)
+             52 LOAD_ATTR                4 (enrolled)
+
+ 29          62 LOAD_FAST                0 (self)
+             64 LOAD_ATTR                5 (created_at)
+
+ 23          74 LOAD_CONST               1 (('name', 'student_id', 'grade', 'major', 'enrolled', 'created_at'))
+             76 BUILD_CONST_KEY_MAP      6
+             78 RETURN_VALUE
