@@ -235,3 +235,12 @@
 2026-08-16 23:53:28 | INFO     | services.student_service:list_students:77 | Listing students (enrolled_only=False).
 2026-08-16 23:53:28 | DEBUG    | services.student_service:_load_data:36 | Loaded 11 student(s) from C:\Users\Dell\Desktop\maintenance\perfective\data\students.json.
 2026-08-16 23:53:28 | DEBUG    | services.student_service:list_students:81 | Returning 11 student(s).
+2026-08-18 11:23:28 | DEBUG    | utils.logger_setup:setup_logging:59 | Loguru logging initialised.
+2026-08-18 11:23:28 | INFO     | __main__:main:185 | Program started.
+2026-08-18 11:23:31 | DEBUG    | __main__:main:215 | Menu choice: 7
+2026-08-18 11:23:31 | INFO     | __main__:action_sort:156 | User selected: Sort students.
+2026-08-18 11:23:33 | INFO     | services.student_service:list_students:77 | Listing students (enrolled_only=False).
+2026-08-18 11:23:33 | DEBUG    | services.student_service:_load_data:36 | Loaded 11 student(s) from C:\Users\Dell\Desktop\SWE-4802-Software-Maintenance\perfective\data\students.json.
+2026-08-18 11:23:33 | DEBUG    | services.student_service:list_students:81 | Returning 11 student(s).
+2026-08-18 11:23:33 | DEBUG    | services.student_service:sort_by_grade:201 | Sorting 11 student(s) by grade (reverse=False).
+2026-08-18 11:23:39 | INFO     | __main__:main:208 | User exited the program.

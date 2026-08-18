@@ -1,0 +1,40 @@
+ 12           0 RESUME                   0
+
+ 13           2 LOAD_FAST                0 (students)
+              4 POP_JUMP_FORWARD_IF_TRUE    17 (to 40)
+
+ 14           6 LOAD_GLOBAL              1 (NULL + print)
+             18 LOAD_CONST               1 ('  (no students to display)')
+             20 PRECALL                  1
+             24 CALL                     1
+             34 POP_TOP
+
+ 15          36 LOAD_CONST               0 (None)
+             38 RETURN_VALUE
+
+ 16     >>   40 LOAD_GLOBAL              1 (NULL + print)
+             52 PRECALL                  0
+             56 CALL                     0
+             66 POP_TOP
+
+ 17          68 LOAD_FAST                0 (students)
+             70 GET_ITER
+        >>   72 FOR_ITER                20 (to 114)
+             74 STORE_FAST               1 (s)
+
+ 18          76 LOAD_GLOBAL              1 (NULL + print)
+             88 LOAD_CONST               2 ('  ')
+             90 LOAD_FAST                1 (s)
+             92 FORMAT_VALUE             0
+             94 BUILD_STRING             2
+             96 PRECALL                  1
+            100 CALL                     1
+            110 POP_TOP
+            112 JUMP_BACKWARD           21 (to 72)
+
+ 19     >>  114 LOAD_GLOBAL              1 (NULL + print)
+            126 PRECALL                  0
+            130 CALL                     0
+            140 POP_TOP
+            142 LOAD_CONST               0 (None)
+            144 RETURN_VALUE

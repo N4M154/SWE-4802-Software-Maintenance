@@ -367,3 +367,15 @@ New var:....... students = [Student(name='Yugesh Kumar', student_id='STU001...d=
 23:32:34.189179 return      82     return students
 Return value:.. [Student(name='Yugesh Kumar', student_id='STU001...d=True, created_at='2026-06-11T18:39:52.606491')]
 Elapsed time: 00:00:00.060199
+Source path:... C:\Users\Dell\Desktop\SWE-4802-Software-Maintenance\preventive\services\student_service.py
+Starting var:.. enrolled_only = False
+23:39:51.269132 call        72 def list_students(enrolled_only: bool = False) -> List[Student]:
+23:39:51.271133 line        77     logger.info(f"Listing students (enrolled_only={enrolled_only}).")
+23:39:51.272300 line        78     students = _load_data()
+New var:....... students = [Student(name='Yugesh Kumar', student_id='STU001...d=True, created_at='2026-06-11T18:39:52.606491')]
+23:39:51.273367 line        79     if enrolled_only:
+23:39:51.274312 line        81     logger.debug(f"Returning {len(students)} student(s).")
+23:39:51.275315 line        82     return students
+23:39:51.276311 return      82     return students
+Return value:.. [Student(name='Yugesh Kumar', student_id='STU001...d=True, created_at='2026-06-11T18:39:52.606491')]
+Elapsed time: 00:00:00.008181

@@ -195,3 +195,12 @@
 2026-07-10 00:39:22 | INFO     | services.report_service:major_breakdown:66 | Computing major breakdown.
 2026-07-10 00:39:22 | DEBUG    | services.report_service:major_breakdown:71 | Major breakdown: {'Computer Science': 2, 'Electrical Engineering': 1, 'Mathematics': 1, 'Physics': 1, 'Swe': 1}
 2026-07-10 00:39:22 | SUCCESS  | services.report_service:print_full_report:122 | Full report printed.
+2026-08-18 11:25:09 | DEBUG    | utils.logger_setup:setup_logging:59 | Loguru logging initialised.
+2026-08-18 11:25:09 | INFO     | __main__:main:163 | Program started.
+2026-08-18 11:25:11 | DEBUG    | __main__:main:192 | Menu choice: 7
+2026-08-18 11:25:11 | INFO     | __main__:action_sort:140 | User selected: Sort students.
+2026-08-18 11:25:12 | INFO     | services.student_service:list_students:59 | Listing students (enrolled_only=False).
+2026-08-18 11:25:12 | DEBUG    | services.student_service:_load_data:35 | Loaded 6 student(s) from C:\Users\Dell\Desktop\SWE-4802-Software-Maintenance\base\data\students.json.
+2026-08-18 11:25:12 | DEBUG    | services.student_service:list_students:63 | Returning 6 student(s).
+2026-08-18 11:25:12 | DEBUG    | services.student_service:sort_by_grade:183 | Sorting 6 student(s) by grade (reverse=False).
+2026-08-18 11:25:14 | INFO     | __main__:main:185 | User exited the program.
