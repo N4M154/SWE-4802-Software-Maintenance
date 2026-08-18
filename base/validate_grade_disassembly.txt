@@ -1,0 +1,79 @@
+ 13           0 RESUME                   0
+
+ 18           2 NOP
+
+ 19           4 LOAD_GLOBAL              1 (NULL + float)
+             16 LOAD_FAST                0 (grade_str)
+             18 LOAD_METHOD              1 (strip)
+             40 PRECALL                  0
+             44 CALL                     0
+             54 PRECALL                  1
+             58 CALL                     1
+             68 STORE_FAST               1 (grade)
+             70 JUMP_FORWARD            59 (to 190)
+        >>   72 PUSH_EXC_INFO
+
+ 20          74 LOAD_GLOBAL              4 (ValueError)
+             86 CHECK_EXC_MATCH
+             88 POP_JUMP_FORWARD_IF_FALSE    46 (to 182)
+             90 POP_TOP
+
+ 21          92 LOAD_GLOBAL              6 (logger)
+            104 LOAD_METHOD              4 (warning)
+            126 LOAD_CONST               1 ("Non-numeric grade entered: '")
+            128 LOAD_FAST                0 (grade_str)
+            130 FORMAT_VALUE             0
+            132 LOAD_CONST               2 ("'")
+            134 BUILD_STRING             3
+            136 PRECALL                  1
+            140 CALL                     1
+            150 POP_TOP
+
+ 22         152 LOAD_GLOBAL              5 (NULL + ValueError)
+            164 LOAD_CONST               3 ('Grade must be a numeric value.')
+            166 PRECALL                  1
+            170 CALL                     1
+            180 RAISE_VARARGS            1
+
+ 20     >>  182 RERAISE                  0
+        >>  184 COPY                     3
+            186 POP_EXCEPT
+            188 RERAISE                  1
+
+ 23     >>  190 LOAD_CONST               4 (0.0)
+            192 LOAD_FAST                1 (grade)
+            194 SWAP                     2
+            196 COPY                     2
+            198 COMPARE_OP               1 (<=)
+            204 POP_JUMP_FORWARD_IF_FALSE     6 (to 218)
+            206 LOAD_CONST               5 (4.0)
+            208 COMPARE_OP               1 (<=)
+            214 POP_JUMP_FORWARD_IF_TRUE    46 (to 308)
+            216 JUMP_FORWARD             1 (to 220)
+        >>  218 POP_TOP
+
+ 24     >>  220 LOAD_GLOBAL              6 (logger)
+            232 LOAD_METHOD              4 (warning)
+            254 LOAD_CONST               6 ('Grade out of range: ')
+            256 LOAD_FAST                1 (grade)
+            258 FORMAT_VALUE             0
+            260 BUILD_STRING             2
+            262 PRECALL                  1
+            266 CALL                     1
+            276 POP_TOP
+
+ 25         278 LOAD_GLOBAL              5 (NULL + ValueError)
+            290 LOAD_CONST               7 ('Grade (GPA) must be between 0.0 and 4.0.')
+            292 PRECALL                  1
+            296 CALL                     1
+            306 RAISE_VARARGS            1
+
+ 26     >>  308 LOAD_GLOBAL             11 (NULL + round)
+            320 LOAD_FAST                1 (grade)
+            322 LOAD_CONST               8 (2)
+            324 PRECALL                  2
+            328 CALL                     2
+            338 RETURN_VALUE
+ExceptionTable:
+  4 to 68 -> 72 [0]
+  72 to 182 -> 184 [1] lasti
