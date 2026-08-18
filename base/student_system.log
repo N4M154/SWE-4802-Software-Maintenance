@@ -195,3 +195,15 @@
 2026-07-10 00:39:22 | INFO     | services.report_service:major_breakdown:66 | Computing major breakdown.
 2026-07-10 00:39:22 | DEBUG    | services.report_service:major_breakdown:71 | Major breakdown: {'Computer Science': 2, 'Electrical Engineering': 1, 'Mathematics': 1, 'Physics': 1, 'Swe': 1}
 2026-07-10 00:39:22 | SUCCESS  | services.report_service:print_full_report:122 | Full report printed.
+2026-08-18 14:47:30 | DEBUG    | utils.logger_setup:setup_logging:59 | Loguru logging initialised.
+2026-08-18 14:47:30 | INFO     | __main__:main:163 | Program started.
+2026-08-18 14:47:36 | INFO     | __main__:main:185 | User exited the program.
+2026-08-18 14:47:39 | DEBUG    | utils.logger_setup:setup_logging:59 | Loguru logging initialised.
+2026-08-18 14:47:39 | INFO     | __main__:main:163 | Program started.
+2026-08-18 14:47:48 | DEBUG    | __main__:main:192 | Menu choice: 3
+2026-08-18 14:47:48 | INFO     | __main__:action_search:103 | User selected: Search student.
+2026-08-18 14:49:28 | INFO     | services.student_service:search_student:103 | Searching for: 'STU007'.
+2026-08-18 14:49:28 | DEBUG    | services.student_service:_load_data:35 | Loaded 6 student(s) from C:\Users\Dell\Desktop\SWE-4802-Software-Maintenance\base\data\students.json.
+2026-08-18 14:49:28 | DEBUG    | services.student_service:search_student:110 | Search returned 0 result(s) for 'stu007'.
+2026-08-18 14:49:32 | DEBUG    | __main__:main:192 | Menu choice: 5
+2026-08-18 14:49:32 | INFO     | __main__:action_update:124 | User selected: Update student.
